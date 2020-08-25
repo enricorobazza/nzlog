@@ -2,11 +2,13 @@
 
 .container {
   // background-color: $primary;
+  position: relative;
 }
 
 .wrapper {
   margin: 0 auto;
   // background-color: blue;
+  z-index: 5;
 }
 
 .textContainer {
@@ -40,6 +42,7 @@
   color: white;
   line-height: 140%;
   font-weight: 600;
+  z-index: 5;
 }
 
 .description {
@@ -47,6 +50,7 @@
   color: white;
   line-height: 140%;
   font-size: 18px;
+  z-index: 5;
   // padding-bottom: 60px;
 }
 
@@ -54,6 +58,7 @@
   object-fit: contain !important;
   padding-bottom: -50px;
   vertical-align: bottom;
+  z-index: 5;
 }
 
 .svg {
@@ -163,4 +168,16 @@
 
 .wave {
   fill: white;
+}
+
+.svgBack {
+  position: absolute;
+  top: 0;
+  left: 0;
+  // z-index: -1;
+}
+
+.waveBack {
+  fill: #740202;
+  opacity: 13%;
 }
