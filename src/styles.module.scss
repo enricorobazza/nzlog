@@ -1,0 +1,62 @@
+@import "./styles.scss";
+
+// $xxs: 320px;
+// $xs: 480px;
+// $sm: 600px;
+// $md: 768px;
+// $lg: 900px;
+// $xl: 1024px;
+// $xxl: 1200px;
+// $xxxl: 1500px;
+
+.gradient {
+  background: linear-gradient(22.789deg, #f70009 5.42%, #970006 95.57%);
+  // transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.wrapper {
+  max-width: $xxl;
+}
+
+@media only screen and (max-width: $xxl) {
+  .wrapper {
+    max-width: $xl;
+  }
+}
+
+@media only screen and (max-width: $xl) {
+  .wrapper {
+    max-width: $lg;
+    padding: 0 1%;
+  }
+}
+
+@media only screen and (max-width: $lg) {
+  .wrapper {
+    max-width: $md;
+  }
+}
+
+@media only screen and (max-width: $md) {
+  .wrapper {
+    max-width: $sm;
+  }
+}
+
+@media only screen and (max-width: $sm) {
+  .wrapper {
+    max-width: $xs;
+  }
+}
+
+@media only screen and (max-width: $xs) {
+  .wrapper {
+    padding: 0 10%;
+  }
+}
+
+// @media only screen and (max-width: $xxs) {
+//   .wrapper {
+//     max-width: 290px;
+//   }
+// }

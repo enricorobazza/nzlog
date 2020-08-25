@@ -1,0 +1,22 @@
+$primary: rgb(221, 34, 21);
+$secondary: #ffd101;
+$light-gray: #eee;
+$gray: #ccc;
+$dark-gray: #777;
+$dark: #1f1f1f;
+$font-primary: "Poppins", Arial, Helvetica, sans-serif;
+$font-title: "Permanent Marker", Arial, Helvetica, sans-serif;
+$xxs: 320px;
+$xs: 480px;
+$sm: 600px;
+$md: 768px;
+$lg: 900px;
+$xl: 1024px;
+$xxl: 1200px;
+$xxxl: 1500px;
+
+:export {
+  secondary: $secondary;
+  primary: $primary;
+  md: $md;
+}
