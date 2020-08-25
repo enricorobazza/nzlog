@@ -19,6 +19,13 @@ const Banner2 = () => {
 
   return (
     <div className={styles.container}>
+      <svg viewBox="0 0 1920 406" className={styles.svgBack}>
+        <path
+          d="M0 0C0 0 238.202 263.013 746.966 308.936C1255.73 354.859 1377.98 163.861 1920 137.769V273.45C1237.75 155.616 1189.3 406 480.899 406C203.146 406 0 273.45 0 273.45V0Z"
+          className={styles.waveBack}
+        />
+      </svg>
+
       <div className={`${styles.wrapper} ${globalStyles.wrapper}`}>
         <div
           className={`${styles.textContainer} col-7 col-xl-6 col-lg-6 col-md-6 col-xs-12 col-xs-12 col-xxs-12`}
