@@ -63,17 +63,66 @@ const Products = () => {
           }
         }
       }
+      coca_active: file(relativePath: { eq: "coca_active.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 60, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      fanta_active: file(relativePath: { eq: "fanta_active.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 60, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      monster_active: file(relativePath: { eq: "monster_active.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 60, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      matte_active: file(relativePath: { eq: "matte_active.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 60, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      crystal_active: file(relativePath: { eq: "crystal_active.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 60, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      delvalle_active: file(relativePath: { eq: "delvalle_active.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 60, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      schweppes_active: file(relativePath: { eq: "schweppes_active.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 60, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
 
   const products = [
-    data.coca,
-    data.fanta,
-    data.monster,
-    data.matte,
-    data.crystal,
-    data.delvalle,
-    data.schweppes,
+    { img: data.coca, active: data.coca_active },
+    { img: data.fanta, active: data.fanta_active },
+    { img: data.monster, active: data.monster_active },
+    { img: data.matte, active: data.matte_active },
+    { img: data.crystal, active: data.crystal_active },
+    { img: data.delvalle, active: data.delvalle_active },
+    { img: data.schweppes, active: data.schweppes_active },
   ]
 
   return (
@@ -94,7 +143,14 @@ const Products = () => {
         <div className={styles.products}>
           {products.map(product => (
             <div className={styles.productContainer}>
-              <Img fluid={product.childImageSharp.fluid} />
+              <Img
+                className={styles.productWipedOut}
+                fluid={product.img.childImageSharp.fluid}
+              />
+              <Img
+                className={styles.productActive}
+                fluid={product.active.childImageSharp.fluid}
+              />
             </div>
           ))}
         </div>

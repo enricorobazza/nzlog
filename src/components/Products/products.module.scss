@@ -22,58 +22,6 @@
   padding-right: calc((101% - #{$xxl}) / 2);
 }
 
-// $xxs: 320px;
-// $xs: 480px;
-// $sm: 600px;
-// $md: 768px;
-// $lg: 900px;
-// $xl: 1024px;
-// $xxl: 1200px;
-// $xxxl: 1500px;
-
-@media only screen and (max-width: $xxl) {
-  .wrapper {
-    padding-right: calc((101% - #{$xl}) / 2);
-  }
-}
-
-@media only screen and (max-width: $xl) {
-  .wrapper {
-    padding-right: calc((101% - #{$lg}) / 2);
-  }
-}
-
-@media only screen and (max-width: $lg) {
-  .wrapper {
-    padding-right: calc((101% - #{$md}) / 2);
-  }
-}
-
-@media only screen and (max-width: $md) {
-  .wrapper {
-    // padding-right: calc((101% - #{$sm}) / 2);
-    padding-right: 0;
-    text-align: center;
-    width: 100%;
-    padding: 40px;
-  }
-  .imgContainer {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: $sm) {
-  // .wrapper {
-  //   padding-right: calc((101% - #{$xs}) / 2);
-  // }
-}
-
-@media only screen and (max-width: $xs) {
-  // .wrapper {
-  //   padding-right: 10%;
-  // }
-}
-
 .imgContainer img {
   object-fit: contain !important;
   object-position: 0 0 !important;
@@ -137,4 +85,91 @@
 
 .callToActionContainer {
   margin-top: 50px;
+}
+
+.productContainer:hover .productWipedOut {
+  display: none;
+}
+
+.productContainer:hover .productActive {
+  display: block;
+}
+
+.productWipedOut {
+  // background-color: #456;
+}
+
+.productActive {
+  display: none;
+}
+
+// $xxs: 320px;
+// $xs: 480px;
+// $sm: 600px;
+// $md: 768px;
+// $lg: 900px;
+// $xl: 1024px;
+// $xxl: 1200px;
+// $xxxl: 1500px;
+
+@media only screen and (max-width: $xxl) {
+  .wrapper {
+    padding-right: calc((101% - #{$xl}) / 2);
+  }
+}
+
+@media only screen and (max-width: $xl) {
+  .wrapper {
+    padding-right: calc((101% - #{$lg}) / 2);
+  }
+}
+
+@media only screen and (max-width: $lg) {
+  .wrapper {
+    padding-right: calc((101% - #{$md}) / 2);
+  }
+}
+
+@media only screen and (max-width: $md) {
+  .wrapper {
+    // padding-right: calc((101% - #{$sm}) / 2);
+    padding-right: 0;
+    text-align: center;
+    width: 100%;
+    padding: 10px 15px;
+    padding-bottom: 100px;
+  }
+  .imgContainer {
+    display: none;
+  }
+  .products {
+    margin: 15px auto;
+    width: 100%;
+  }
+
+  .productContainer {
+    width: 100%;
+    margin: 5px;
+    margin-top: 15px;
+  }
+
+  .productWipedOut {
+    display: none;
+  }
+
+  .productActive {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: $sm) {
+  // .wrapper {
+  //   padding-right: calc((101% - #{$xs}) / 2);
+  // }
+}
+
+@media only screen and (max-width: $xs) {
+  // .wrapper {
+  //   padding-right: 10%;
+  // }
 }
