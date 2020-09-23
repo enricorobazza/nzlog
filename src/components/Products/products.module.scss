@@ -1,0 +1,140 @@
+@import "../../styles.scss";
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+}
+
+.imgContainer {
+  height: 130%;
+  width: 45vw;
+  text-align: left;
+  display: inline-block;
+}
+
+.wrapper {
+  width: 55vw;
+  display: inline-block;
+  margin: 0;
+  padding-right: calc((101% - #{$xxl}) / 2);
+}
+
+// $xxs: 320px;
+// $xs: 480px;
+// $sm: 600px;
+// $md: 768px;
+// $lg: 900px;
+// $xl: 1024px;
+// $xxl: 1200px;
+// $xxxl: 1500px;
+
+@media only screen and (max-width: $xxl) {
+  .wrapper {
+    padding-right: calc((101% - #{$xl}) / 2);
+  }
+}
+
+@media only screen and (max-width: $xl) {
+  .wrapper {
+    padding-right: calc((101% - #{$lg}) / 2);
+  }
+}
+
+@media only screen and (max-width: $lg) {
+  .wrapper {
+    padding-right: calc((101% - #{$md}) / 2);
+  }
+}
+
+@media only screen and (max-width: $md) {
+  .wrapper {
+    // padding-right: calc((101% - #{$sm}) / 2);
+    padding-right: 0;
+    text-align: center;
+    width: 100%;
+    padding: 40px;
+  }
+  .imgContainer {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: $sm) {
+  // .wrapper {
+  //   padding-right: calc((101% - #{$xs}) / 2);
+  // }
+}
+
+@media only screen and (max-width: $xs) {
+  // .wrapper {
+  //   padding-right: 10%;
+  // }
+}
+
+.imgContainer img {
+  object-fit: contain !important;
+  object-position: 0 0 !important;
+  height: 100%;
+  width: 100%;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 140%;
+  color: $primary;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 140%;
+  margin-top: 10px;
+  color: #adadad;
+}
+
+.products {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 70px;
+  margin-top: 30px;
+}
+
+.productContainer {
+  display: inline-block;
+  width: calc(12% - 15px);
+  // width: percentage(1/11);
+  // flex: 1;
+}
+
+.productContainer img {
+  object-fit: cover !important;
+}
+
+.callToAction {
+  border: 1px solid $primary;
+  border-radius: 5px;
+  padding: 9px 38px;
+  background-color: white;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: $primary;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 0.095em;
+  transition: all 100ms ease-in;
+}
+
+.callToAction:hover {
+  color: white;
+  background-color: $primary;
+}
+
+.callToActionContainer {
+  margin-top: 50px;
+}

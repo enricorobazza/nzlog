@@ -1,0 +1,27 @@
+@import "../../styles.scss";
+
+.wrapper {
+  text-align: center;
+}
+
+.imgContainer {
+  width: percentage(1/13);
+  display: inline-block;
+  text-align: center;
+}
+
+.imgContainerWrapper {
+  height: 100%;
+  padding: 1.5vw;
+}
+
+.wrapper img {
+  object-fit: contain !important;
+  padding-bottom: 0;
+}
+
+@media only screen and (max-width: $md) {
+  .imgContainer {
+    width: percentage(1/7);
+  }
+}
