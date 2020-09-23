@@ -1,7 +1,7 @@
 import React from "react"
 import styles from "./header.module.scss"
 import globalStyles from "../../styles.module.scss"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const Header = () => (
   <header className={styles.header}>
@@ -16,7 +16,7 @@ const Header = () => (
           <li>Onde Atuamos</li>
           <li className={styles.button}>Contato</li>
         </ul>
-        <div className={styles.hamburguer}>
+        {/* <div className={styles.hamburguer}>
           <FontAwesomeIcon
             className={styles.icon}
             icon={["fas", "bars"]}
@@ -24,7 +24,7 @@ const Header = () => (
             //   setDropdown(!dropdown)
             // }}
           />
-        </div>
+        </div> */}
       </div>
     </div>
   </header>

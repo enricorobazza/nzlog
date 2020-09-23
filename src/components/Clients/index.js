@@ -105,8 +105,8 @@ const Clients = () => {
   return (
     <div>
       <div className={`${globalStyles.wrapper} ${styles.wrapper}`}>
-        {Object.values(data).map(logo => (
-          <div className={styles.imgContainer}>
+        {Object.values(data).map((logo, index) => (
+          <div className={styles.imgContainer} key={index}>
             <div className={styles.imgContainerWrapper}>
               <Img fluid={logo.childImageSharp.fluid} />
             </div>

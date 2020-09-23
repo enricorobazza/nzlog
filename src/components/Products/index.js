@@ -141,8 +141,8 @@ const Products = () => {
           ambiente de trabalho ainda mais agradável! Estão disponíveis:
         </div>
         <div className={styles.products}>
-          {products.map(product => (
-            <div className={styles.productContainer}>
+          {products.map((product, index) => (
+            <div className={styles.productContainer} key={index}>
               <Img
                 className={styles.productWipedOut}
                 fluid={product.img.childImageSharp.fluid}
