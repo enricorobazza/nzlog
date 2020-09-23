@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
 import styles from "./products.module.scss"
+import CallToAction from "../CallToAction"
 
 const Products = () => {
   const data = useStaticQuery(graphql`
@@ -154,11 +155,7 @@ const Products = () => {
             </div>
           ))}
         </div>
-        <div className={styles.callToActionContainer}>
-          <a className={styles.callToAction} href="#">
-            Entrar em contato
-          </a>
-        </div>
+        <CallToAction />
       </div>
     </div>
   )

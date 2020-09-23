@@ -1,0 +1,25 @@
+@import "../../styles.scss";
+
+.callToAction {
+  border: 1px solid $primary;
+  border-radius: 5px;
+  padding: 9px 38px;
+  background-color: white;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: $primary;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 0.095em;
+  transition: all 100ms ease-in;
+}
+
+.callToAction:hover {
+  color: white;
+  background-color: $primary;
+}
+
+.callToActionContainer {
+  margin-top: 50px;
+}

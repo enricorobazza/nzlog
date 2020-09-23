@@ -63,40 +63,12 @@
   object-fit: cover !important;
 }
 
-.callToAction {
-  border: 1px solid $primary;
-  border-radius: 5px;
-  padding: 9px 38px;
-  background-color: white;
-  font-size: 14px;
-  text-transform: uppercase;
-  color: $primary;
-  text-decoration: none;
-  cursor: pointer;
-  font-weight: bold;
-  letter-spacing: 0.095em;
-  transition: all 100ms ease-in;
-}
-
-.callToAction:hover {
-  color: white;
-  background-color: $primary;
-}
-
-.callToActionContainer {
-  margin-top: 50px;
-}
-
 .productContainer:hover .productWipedOut {
   display: none;
 }
 
 .productContainer:hover .productActive {
   display: block;
-}
-
-.productWipedOut {
-  // background-color: #456;
 }
 
 .productActive {
@@ -137,7 +109,6 @@
     text-align: center;
     width: 100%;
     padding: 10px 15px;
-    padding-bottom: 100px;
   }
   .imgContainer {
     display: none;

@@ -6,6 +6,7 @@ import Header from "../components/Header"
 import Banner from "../components/Banner"
 import Clients from "../components/Clients"
 import Products from "../components/Products"
+import HardPart from "../components/HardPart"
 
 import styles from "../styles.module.scss"
 
@@ -18,6 +19,7 @@ const IndexPage = () => (
     </div>
     <Clients />
     <Products />
+    <HardPart />
   </Layout>
 )
 
