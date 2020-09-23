@@ -3,6 +3,7 @@ import Img from "gatsby-image"
 import styles from "./banner.module.scss"
 import globalStyles from "../../styles.module.scss"
 import { useStaticQuery, graphql } from "gatsby"
+import { isSafari } from "react-device-detect"
 
 const Banner2 = () => {
   const data = useStaticQuery(graphql`
@@ -42,7 +43,9 @@ const Banner2 = () => {
           </div>
         </div>
         <div
-          className={`${styles.imageContainer} col-5 col-xl-6 col-lg-6 col-md-6 col-xs-12 col-xs-12 col-xxs-12`}
+          className={`${styles.imageContainer} ${
+            isSafari ? styles.isSafari : ""
+          } col-5 col-xl-6 col-lg-6 col-md-6 col-xs-12 col-xs-12 col-xxs-12`}
         >
           <Img fluid={data.machine.childImageSharp.fluid} />
         </div>

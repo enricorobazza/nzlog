@@ -158,6 +158,10 @@
   .imageContainer {
     margin-bottom: -100px;
   }
+
+  .imageContainer.isSafari {
+    margin-bottom: 0;
+  }
 }
 
 .wave {
