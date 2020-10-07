@@ -1,0 +1,111 @@
+@import "../../styles.scss";
+
+.wrapper {
+  background-color: $new-white;
+  padding: 150px 0 150px 0;
+  text-align: center;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: $red;
+  margin: 0 auto;
+}
+
+.description {
+  line-height: 140%;
+  margin-top: 10px;
+  color: $dark-gray;
+}
+
+.advantagesContainer {
+  width: 55%;
+  margin: 0 auto;
+  margin-top: 70px;
+}
+
+.advantage {
+  text-align: center;
+  padding: 20px;
+  line-height: 140%;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 40px;
+}
+
+.icon {
+  font-size: 48px;
+  color: $red;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+// $xxs: 320px;
+// $xs: 480px;
+// $sm: 600px;
+// $md: 768px;
+// $lg: 900px;
+// $xl: 1024px;
+// $xxl: 1200px;
+// $xxxl: 1500px;
+
+@media only screen and (max-width: $xxl) {
+  .advantagesContainer {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: $xl) {
+  .title {
+    width: 70%;
+  }
+  .advantagesContainer {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: $lg) {
+  .advantagesContainer {
+    width: 70%;
+  }
+  .wrapper {
+    padding: 80px 0 80px 0;
+  }
+}
+
+@media only screen and (max-width: $md) {
+  .advantagesContainer {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: $sm) {
+  .advantagesContainer {
+    width: 95%;
+  }
+  .title {
+    width: 80%;
+  }
+  .description {
+    margin-top: 40px;
+  }
+}
+
+@media only screen and (max-width: $xs) {
+  .advantagesContainer {
+    width: 60%;
+  }
+  .title {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: $xxs) {
+  .advantagesContainer {
+    width: 80%;
+  }
+}
