@@ -8,7 +8,7 @@ import CallToAction from "../CallToAction"
 const Products = () => {
   const data = useStaticQuery(graphql`
     query {
-      products: file(relativePath: { eq: "products.png" }) {
+      products: file(relativePath: { eq: "products2.png" }) {
         childImageSharp {
           fluid(maxWidth: 1000, quality: 100) {
             ...GatsbyImageSharpFluid
