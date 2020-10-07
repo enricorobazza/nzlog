@@ -1,0 +1,46 @@
+@import "../../styles.scss";
+
+.background {
+  width: 100%;
+  background-color: $primary;
+  background-size: contain;
+  background-position: right;
+}
+
+.wrapper {
+  width: 60%;
+  padding: 100px 0 100px 80px;
+  color: white;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 140%;
+  text-transform: uppercase;
+}
+
+.description {
+  // color: white;
+  line-height: 140%;
+  margin-top: 10px;
+}
+
+.establishmentsContainer {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.establishment {
+  display: inline-block;
+  // margin-right: 50px;
+  margin-bottom: 30px;
+  font-weight: 600;
+  line-height: 140%;
+  font-size: 18px;
+}
+
+.icon {
+  font-size: 18px;
+  margin-right: 10px;
+}

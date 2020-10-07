@@ -15,9 +15,20 @@
   transition: all 100ms ease-in;
 }
 
+.outlined {
+  border: 1px solid white;
+  background-color: $primary;
+  color: white;
+}
+
 .callToAction:hover {
   color: white;
   background-color: $primary;
+}
+
+.outlined:hover {
+  color: $primary;
+  background-color: white;
 }
 
 .callToActionContainer {
