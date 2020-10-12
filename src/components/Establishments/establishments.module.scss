@@ -1,15 +1,25 @@
 @import "../../styles.scss";
 
-.background {
-  width: 100%;
+.container {
   background-color: $primary;
-  background-size: contain;
-  background-position: right;
+  width: 100%;
+  display: flex;
+}
+
+.left {
+  flex: 6;
+  display: inline-block;
+}
+
+.background {
+  padding: 0;
+  flex: 4;
+  background-size: cover;
+  background-position: left;
 }
 
 .wrapper {
-  width: 60%;
-  padding: 110px 0 110px 80px;
+  padding: 110px 80px 110px 80px;
   color: white;
 }
 
@@ -42,4 +52,60 @@
 .icon {
   font-size: 18px;
   margin-right: 10px;
+}
+
+// $xxs: 320px;
+// $xs: 480px;
+// $sm: 600px;
+// $md: 768px;
+// $lg: 900px;
+// $xl: 1024px;
+// $xxl: 1200px;
+// $xxxl: 1500px;
+
+@media only screen and (max-width: $xxl) {
+  .left {
+    flex: 7;
+  }
+  .background {
+    flex: 3;
+  }
+}
+
+@media only screen and (max-width: $xl) {
+  .left {
+    flex: 6;
+  }
+  .background {
+    flex: 4;
+  }
+}
+
+@media only screen and (max-width: $lg) {
+  .wrapper {
+    padding: 70px 30px 70px 30px;
+  }
+}
+
+@media only screen and (max-width: $md) {
+  .background {
+    display: none;
+  }
+  .left {
+    text-align: center;
+  }
+
+  .description {
+    margin-bottom: 40px;
+  }
+
+  .establishmentsContainer {
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: $sm) {
+}
+
+@media only screen and (max-width: $xs) {
 }

@@ -1,0 +1,135 @@
+@import "../../styles.scss";
+
+.wrapper {
+  background-color: white;
+  width: 100%;
+  min-height: 300px;
+  text-align: center;
+  padding: 110px 0 110px 0;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: $red;
+  margin: 0 auto;
+}
+
+.description {
+  line-height: 140%;
+  margin-top: 10px;
+  color: $dark-gray;
+}
+
+// .placesContainer {
+//   display: flex;
+// }
+
+.place {
+  padding: 100px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.placeImage {
+  width: 100%;
+  height: auto !important;
+}
+
+.placeImage img {
+  height: auto !important;
+}
+
+.placeTitle {
+  margin-bottom: 50px;
+  font-weight: 600;
+  color: $red;
+  font-size: 18px;
+}
+
+// $xxs: 320px;
+// $xs: 480px;
+// $sm: 600px;
+// $md: 768px;
+// $lg: 900px;
+// $xl: 1024px;
+// $xxl: 1200px;
+// $xxxl: 1500px;
+
+@media only screen and (max-width: $xxl) {
+  // .advantagesContainer {
+  //   width: 40%;
+  // }
+}
+
+@media only screen and (max-width: $xl) {
+  // .title {
+  //   width: 70%;
+  // }
+  // .advantagesContainer {
+  //   width: 60%;
+  // }
+}
+
+@media only screen and (max-width: $lg) {
+  // .advantagesContainer {
+  //   width: 70%;
+  // }
+  .wrapper {
+    padding: 80px 0 80px 0;
+  }
+}
+
+@media only screen and (max-width: $md) {
+  .advantagesContainer {
+    width: 80%;
+  }
+
+  .place {
+    padding: 120px;
+  }
+}
+
+@media only screen and (max-width: $sm) {
+  // .advantagesContainer {
+  //   width: 95%;
+  // }
+  // .title {
+  //   width: 80%;
+  // }
+  // .description {
+  //   margin-top: 40px;
+  // }
+
+  .place {
+    padding: 80px;
+  }
+
+  .wrapper {
+    padding: 80px 15px 80px 15px;
+  }
+}
+
+@media only screen and (max-width: $xs) {
+  // .advantagesContainer {
+  //   width: 60%;
+  // }
+  // .title {
+  //   width: 100%;
+  // }
+  .place {
+    padding: 50px;
+  }
+}
+
+@media only screen and (max-width: $xxs) {
+  // .advantagesContainer {
+  //   width: 80%;
+  // }
+
+  .place {
+    padding: 20px;
+  }
+}

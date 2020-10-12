@@ -31,37 +31,40 @@ const Establishments = () => {
   ]
 
   return (
-    <BackgroundImage
-      className={styles.background}
-      fluid={data.bg.childImageSharp.fluid}
-    >
-      <div className={styles.wrapper}>
-        <div className={styles.title}>Onde podem ser instaladas</div>
-        <div className={styles.description}>
-          As Vending Machines podem ser instaladas em qualquer lugar, desde que
-          se tenha visibilidade e um alto fluxo de pessoas, como em:
+    <div className={styles.container}>
+      <div className={styles.left}>
+        <div className={styles.wrapper}>
+          <div className={styles.title}>Onde podem ser instaladas</div>
+          <div className={styles.description}>
+            As Vending Machines podem ser instaladas em qualquer lugar, desde
+            que se tenha visibilidade e um alto fluxo de pessoas, como em:
+          </div>
+          <div className={styles.establishmentsContainer}>
+            {establishments.map(establishment => {
+              return (
+                <div
+                  className={`${styles.establishment} col-4 col-xl-6 col-lg-6 col-md-4 col-xs-4 col-xs-12 col-xxs-12`}
+                >
+                  <FontAwesomeIcon
+                    className={styles.icon}
+                    icon={["fas", "map-marker-alt"]}
+                  />
+                  {establishment}
+                </div>
+              )
+            })}
+          </div>
+          <div className={styles.description}>
+            Entre em contato para saber se o seu local está disponível
+          </div>
+          <CallToAction outlined />
         </div>
-        <div className={styles.establishmentsContainer}>
-          {establishments.map(establishment => {
-            return (
-              <div
-                className={`${styles.establishment} col-4 col-xl-4 col-lg-4 col-md-4 col-xs-6 col-xs-6 col-xxs-6`}
-              >
-                <FontAwesomeIcon
-                  className={styles.icon}
-                  icon={["fas", "map-marker-alt"]}
-                />
-                {establishment}
-              </div>
-            )
-          })}
-        </div>
-        <div className={styles.description}>
-          Entre em contato para saber se o seu local está disponível
-        </div>
-        <CallToAction outlined />
       </div>
-    </BackgroundImage>
+      <BackgroundImage
+        className={styles.background}
+        fluid={data.bg.childImageSharp.fluid}
+      ></BackgroundImage>
+    </div>
   )
 }
 

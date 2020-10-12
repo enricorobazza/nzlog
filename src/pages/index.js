@@ -9,6 +9,7 @@ import Products from "../components/Products"
 import HardPart from "../components/HardPart"
 import Establishments from "../components/Establishments"
 import Advantages from "../components/Advantages"
+import Places from "../components/Places"
 
 import styles from "../styles.module.scss"
 
@@ -24,6 +25,7 @@ const IndexPage = () => (
     <HardPart />
     <Establishments />
     <Advantages />
+    <Places />
   </Layout>
 )
 
