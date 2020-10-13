@@ -10,6 +10,7 @@ import HardPart from "../components/HardPart"
 import Establishments from "../components/Establishments"
 import Advantages from "../components/Advantages"
 import Places from "../components/Places"
+import Social from "../components/Social"
 
 import styles from "../styles.module.scss"
 
@@ -26,6 +27,7 @@ const IndexPage = () => (
     <Establishments />
     <Advantages />
     <Places />
+    <Social />
   </Layout>
 )
 

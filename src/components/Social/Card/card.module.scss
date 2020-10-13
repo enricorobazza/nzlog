@@ -1,0 +1,69 @@
+@import "../../../styles.scss";
+
+.container {
+  padding: 30px;
+  text-align: left;
+  background-color: white;
+  border-radius: 10px;
+  display: inline-block;
+  transition: all 300ms;
+  scroll-snap-align: center;
+  margin: 0;
+  white-space: normal;
+  position: relative;
+}
+
+.focus {
+  // margin: 0 -200px;
+  z-index: 5;
+  box-shadow: 0px 33.8449px 169.224px -8.46122px rgba(97, 97, 97, 0.3);
+  margin: 0 -15%;
+}
+
+.blur {
+  transform-origin: center center;
+  transform: scale(0.8, 0.8);
+  opacity: 0.3;
+  margin: 0;
+  z-index: 2;
+}
+
+.text {
+  line-height: 160%;
+  font-size: 16px;
+  letter-spacing: 0.16em;
+  color: $darker-gray;
+  margin-bottom: 20px;
+}
+
+.text b {
+  font-weight: 700;
+  color: $red;
+}
+
+.client {
+  color: black;
+  line-height: 160%;
+  letter-spacing: 0.12em;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.company {
+  line-height: 160%;
+  letter-spacing: 0.12em;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.divider {
+  width: 12%;
+  height: 3px;
+  background-color: $red;
+}
+
+.quotes {
+  font-size: 38px;
+  color: $red;
+  margin-bottom: 20px;
+}

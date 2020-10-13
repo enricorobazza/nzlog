@@ -1,0 +1,82 @@
+@import "../../styles.scss";
+
+.container {
+  background-color: $new-white;
+  width: 100%;
+  // min-height: 300px;
+  padding: 50px 100px;
+  text-align: center;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: $red;
+  margin: 0 auto;
+}
+
+.description {
+  line-height: 140%;
+  margin-top: 10px;
+  color: $dark-gray;
+}
+
+.depositionsContainer {
+  // display: flex;
+  // justify-content: center;
+  // width: 50vw;
+  // background-color: #f09;
+  margin: 40px auto;
+  // overflow-x: hidden;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  padding: 0;
+  padding-right: 40px;
+  text-align: center;
+  white-space: nowrap;
+  position: relative;
+}
+
+.depositionsWrapper {
+  width: 100%;
+  // position: absolute;
+  // left: -200px;
+  // margin-left: -300px;
+  transition: all ease-in 200ms;
+}
+
+.btnPrev {
+  position: absolute;
+  top: 45%;
+  left: 13%;
+  z-index: 10;
+}
+
+.btnNext {
+  position: absolute;
+  right: 16%;
+  top: 45%;
+  z-index: 10;
+}
+
+.btn {
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  transition: all ease-in 300ms;
+  box-shadow: 0px 4px 20px rgba(123, 123, 123, 0.25);
+  backdrop-filter: blur(8px);
+}
+
+.icon {
+  font-size: 35px;
+  color: $darker-gray;
+}
+
+.hidden {
+  opacity: 0;
+  cursor: auto;
+}
