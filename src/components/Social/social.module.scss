@@ -3,7 +3,6 @@
 .container {
   background-color: $new-white;
   width: 100%;
-  // min-height: 300px;
   padding: 50px 100px;
   text-align: center;
 }
@@ -24,59 +23,41 @@
 }
 
 .depositionsContainer {
-  // display: flex;
-  // justify-content: center;
-  // width: 50vw;
-  // background-color: #f09;
   margin: 40px auto;
-  // overflow-x: hidden;
   overflow-x: hidden;
-  scroll-snap-type: x mandatory;
   padding: 0;
-  padding-right: 40px;
   text-align: center;
   white-space: nowrap;
   position: relative;
 }
 
 .depositionsWrapper {
-  width: 100%;
-  // position: absolute;
-  // left: -200px;
-  // margin-left: -300px;
+  position: relative;
   transition: all ease-in 200ms;
+  width: 100%;
 }
 
-.btnPrev {
-  position: absolute;
-  top: 45%;
-  left: 13%;
-  z-index: 10;
+// $xxs: 320px;
+// $xs: 480px;
+// $sm: 600px;
+// $md: 768px;
+// $lg: 900px;
+// $xl: 1024px;
+// $xxl: 1200px;
+// $xxxl: 1500px;
+
+@media only screen and (max-width: $sm) {
+  .container {
+    padding: 50px 20px;
+  }
 }
 
-.btnNext {
-  position: absolute;
-  right: 16%;
-  top: 45%;
-  z-index: 10;
-}
+@media only screen and (max-width: $lg) {
+  .btnPrev {
+    left: 2%;
+  }
 
-.btn {
-  background-color: white;
-  border-radius: 50%;
-  padding: 10px;
-  cursor: pointer;
-  transition: all ease-in 300ms;
-  box-shadow: 0px 4px 20px rgba(123, 123, 123, 0.25);
-  backdrop-filter: blur(8px);
-}
-
-.icon {
-  font-size: 35px;
-  color: $darker-gray;
-}
-
-.hidden {
-  opacity: 0;
-  cursor: auto;
+  .btnNext {
+    right: 2%;
+  }
 }

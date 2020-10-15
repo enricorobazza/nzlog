@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react"
 import CallToAction from "../CallToAction"
 import Card from "./Card"
 import styles from "./social.module.scss"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import useWindowDimensions from "../../utils/dimensions"
+import { ArrowButton } from "./ArrowButton"
 
 const Social = () => {
   useEffect(() => {
@@ -11,7 +11,13 @@ const Social = () => {
   }, [])
   const { width } = useWindowDimensions()
   const [current, setCurrent] = useState(0)
-  const [shiftMargin, setShiftMargin] = useState()
+  const [size, setSize] = useState(0)
+
+  const sizes = [
+    { width: "33%", breakpoints: [1 / 3, 0, -1 / 3] },
+    { width: "50%", breakpoints: [5 / 13, -2 / 18, -3 / 5] },
+    { width: "90%", breakpoints: [2 / 10, -14 / 20, -32 / 20] },
+  ]
 
   useEffect(() => {
     /* $xxs: 320px;
@@ -22,11 +28,10 @@ const Social = () => {
       $xl: 1024px;
       $xxl: 1200px;
       $xxxl: 1500px; */
-    // col-6 col-xl-6 col-lg-8 col-md-8 col-sm-10 col-xs-10 col-xs-12 col-xxs-12
-    if (width > 900) setShiftMargin(50)
-    else if (width > 600) setShiftMargin(67)
-    else if (width > 480) setShiftMargin(90)
-    else setShiftMargin(107)
+
+    if (width > 1200) setSize(0)
+    else if (width > 900) setSize(1)
+    else setSize(2)
   }, [width])
 
   const [depositions, setDepositions] = useState([
@@ -80,36 +85,27 @@ const Social = () => {
       <div className={styles.description}>
         Procuramos sempre proporcionar a melhor experiência
       </div>
-      <div
-        className={`${styles.depositionsContainer} col-7 col-xxxl-10 col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-xs-12 col-xs-12 col-xxs-12`}
-      >
-        <div
-          className={`${styles.btnPrev} ${styles.btn} ${
-            current === 0 && styles.hidden
-          }`}
-          onClick={() => changeDepositions(-1)}
-        >
-          <FontAwesomeIcon
-            className={styles.icon}
-            icon={["fas", "arrow-left"]}
-          />
-        </div>
+      <div className={`${styles.depositionsContainer}`}>
+        <ArrowButton
+          width={sizes[size].width}
+          current={current}
+          length={depositions.length}
+          onChange={changeDepositions}
+        />
+
+        <ArrowButton
+          next
+          width={sizes[size].width}
+          current={current}
+          length={depositions.length}
+          onChange={changeDepositions}
+        />
 
         <div
-          className={`${styles.btnNext} ${styles.btn} ${
-            current === depositions.length - 1 && styles.hidden
-          }`}
-          onClick={() => changeDepositions(1)}
-        >
-          <FontAwesomeIcon
-            className={styles.icon}
-            icon={["fas", "arrow-right"]}
-          />
-        </div>
-        <div
           className={styles.depositionsWrapper}
-          style={{ marginLeft: `${-shiftMargin * current + 40}%` }}
-          // style={{ marginLeft: "25%" }}
+          style={{
+            marginLeft: `${sizes[size].breakpoints[current] * 100}%`,
+          }}
         >
           {depositions.map((deposition, index) => {
             return (
@@ -120,6 +116,7 @@ const Social = () => {
                 clientCompany={deposition.company}
                 index={index}
                 current={current}
+                width={sizes[size].width}
               ></Card>
             )
           })}
