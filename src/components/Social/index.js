@@ -12,6 +12,7 @@ const Social = () => {
   const { width } = useWindowDimensions()
   const [current, setCurrent] = useState(0)
   const [size, setSize] = useState(0)
+  const [touch, setTouch] = useState()
 
   const sizes = [
     { width: "33%", breakpoints: [1 / 3, 0, -1 / 3] },
@@ -85,7 +86,34 @@ const Social = () => {
       <div className={styles.description}>
         Procuramos sempre proporcionar a melhor experiência
       </div>
-      <div className={`${styles.depositionsContainer}`}>
+      <div
+        className={`${styles.depositionsContainer}`}
+        onTouchMove={e => {
+          // e.preventDefault()
+        }}
+        onTouchStart={e => {
+          const { pageX, pageY } = e.changedTouches[0]
+          setTouch({ pageX, pageY, time: new Date().getTime() })
+
+          // e.preventDefault()
+        }}
+        onTouchEnd={e => {
+          if (!touch) return
+          const { pageX, pageY } = e.changedTouches[0]
+          const dist = pageX - touch.pageX
+          const elapsedTime = new Date().getTime() - touch.time
+
+          if (
+            elapsedTime <= 800 &&
+            Math.abs(pageY - touch.pageY) <= 50 &&
+            Math.abs(dist) >= 10
+          ) {
+            if (dist > 0) changeDepositions(-1)
+            else changeDepositions(1)
+          }
+          // e.preventDefault()
+        }}
+      >
         <ArrowButton
           width={sizes[size].width}
           current={current}
