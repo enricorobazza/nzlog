@@ -106,7 +106,7 @@ const Social = () => {
           if (
             elapsedTime <= 800 &&
             Math.abs(pageY - touch.pageY) <= 50 &&
-            Math.abs(dist) >= 10
+            Math.abs(dist) >= 20
           ) {
             if (dist > 0) changeDepositions(-1)
             else changeDepositions(1)
