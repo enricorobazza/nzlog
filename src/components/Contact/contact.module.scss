@@ -141,6 +141,17 @@
 
   .formContainer {
     margin-bottom: 30px;
+    width: 100%;
+    padding: 0px 3%;
+  }
+
+  .formRow label {
+    text-align: left;
+  }
+
+  .btnEnviar {
+    width: 100%;
+    padding: 16px 0;
   }
 }
 

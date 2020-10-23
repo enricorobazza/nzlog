@@ -13,6 +13,7 @@
   width: 45vw;
   text-align: left;
   display: inline-block;
+  margin-left: -15vw;
 }
 
 .wrapper {
@@ -20,6 +21,7 @@
   display: inline-block;
   margin: 0;
   padding-right: calc((101% - #{$xxl}) / 2);
+  margin-left: -10vw;
 }
 
 .imgContainer img {
@@ -30,8 +32,8 @@
 }
 
 .title {
-  font-weight: 600;
-  font-size: 35px;
+  font-weight: 800;
+  font-size: 39px;
   line-height: 140%;
   color: $primary;
   text-transform: uppercase;
@@ -110,6 +112,7 @@
     text-align: center;
     width: 100%;
     padding: 100px 15px 180px 15px;
+    margin-left: 0;
   }
   .imgContainer {
     display: none;
