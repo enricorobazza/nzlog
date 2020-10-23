@@ -11,6 +11,8 @@ import Establishments from "../components/Establishments"
 import Advantages from "../components/Advantages"
 import Places from "../components/Places"
 import Social from "../components/Social"
+import Contact from "../components/Contact"
+import Footer from "../components/Footer"
 
 import styles from "../styles.module.scss"
 
@@ -28,6 +30,8 @@ const IndexPage = () => (
     <Advantages />
     <Places />
     <Social />
+    <Contact />
+    <Footer />
   </Layout>
 )
 

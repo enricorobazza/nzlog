@@ -1,0 +1,151 @@
+@import "../../styles.scss";
+
+.container {
+  background-color: $primary;
+  width: 100%;
+  display: flex;
+}
+
+.left {
+  flex: 6;
+  display: inline-block;
+}
+
+.background {
+  padding: 0;
+  flex: 4;
+  background-size: cover;
+  background-position: left;
+}
+
+.wrapper {
+  padding: 110px 80px 110px 80px;
+  color: white;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 140%;
+  text-transform: uppercase;
+}
+
+.description {
+  line-height: 140%;
+  // margin-top: 10px;
+}
+
+.formContainer {
+  margin-top: 20px;
+  width: 70%;
+}
+
+.icon {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.formRow {
+  margin-bottom: 20px;
+}
+
+.formRow label {
+  display: block;
+  font-weight: bold;
+}
+
+.formRow input,
+.formRow textarea {
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  margin-top: 5px;
+  padding: 5px 10px;
+}
+
+.formRow textarea {
+  padding: 10px 10px;
+}
+
+.formRow input:focus,
+.formRow textarea:focus {
+  outline: none;
+}
+
+.btnEnviar {
+  border-radius: 5px;
+  padding: 9px 38px;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 0.095em;
+  transition: all 100ms ease-in;
+
+  border: 1px solid white;
+  background-color: $primary;
+  color: white;
+}
+
+.btnEnviar:hover {
+  color: $primary;
+  background-color: white;
+}
+
+// $xxs: 320px;
+// $xs: 480px;
+// $sm: 600px;
+// $md: 768px;
+// $lg: 900px;
+// $xl: 1024px;
+// $xxl: 1200px;
+// $xxxl: 1500px;
+
+@media only screen and (max-width: $xxl) {
+  .left {
+    flex: 7;
+  }
+  .background {
+    flex: 3;
+  }
+}
+
+@media only screen and (max-width: $xl) {
+  .left {
+    flex: 6;
+  }
+  .background {
+    flex: 4;
+  }
+}
+
+@media only screen and (max-width: $lg) {
+  .wrapper {
+    padding: 70px 30px 70px 30px;
+  }
+}
+
+@media only screen and (max-width: $md) {
+  .background {
+    display: none;
+  }
+  .left {
+    text-align: center;
+  }
+
+  .description {
+    margin-bottom: 40px;
+  }
+
+  .formContainer {
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: $sm) {
+}
+
+@media only screen and (max-width: $xs) {
+}
