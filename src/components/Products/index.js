@@ -113,6 +113,14 @@ const Products = () => {
           }
         }
       }
+
+      products_linear: file(relativePath: { eq: "products3.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
 
@@ -132,30 +140,41 @@ const Products = () => {
         <Img fluid={data.products.childImageSharp.fluid} />
       </div>
 
-      <div className={styles.wrapper}>
-        <span className={styles.title}>
-          Os produtos Coca-Cola na <br /> palma da sua mão
-        </span>
-        <br />
-        <div className={styles.description}>
-          Disponha da grande variedade de produtos Coca-Cola para deixar o seu
-          ambiente de trabalho ainda mais agradável! Estão disponíveis:
+      <div className={styles.contentContainer}>
+        <div className={styles.wrapper}>
+          <span className={styles.title}>
+            Os produtos
+            <span className={styles.noBreak}> Coca-Cola </span>
+            <br />
+            na palma da sua mão
+          </span>
+          <br />
+          <div className={styles.description}>
+            Disponha da grande variedade de produtos Coca-Cola para deixar o seu
+            ambiente de trabalho ainda mais agradável! Estão disponíveis:
+          </div>
+          <div className={styles.products}>
+            {products.map((product, index) => (
+              <div className={styles.productContainer} key={index}>
+                <Img
+                  className={styles.productWipedOut}
+                  fluid={product.img.childImageSharp.fluid}
+                />
+                <Img
+                  className={styles.productActive}
+                  fluid={product.active.childImageSharp.fluid}
+                />
+              </div>
+            ))}
+          </div>
         </div>
-        <div className={styles.products}>
-          {products.map((product, index) => (
-            <div className={styles.productContainer} key={index}>
-              <Img
-                className={styles.productWipedOut}
-                fluid={product.img.childImageSharp.fluid}
-              />
-              <Img
-                className={styles.productActive}
-                fluid={product.active.childImageSharp.fluid}
-              />
-            </div>
-          ))}
+        <div className={styles.productsLinear}>
+          <Img
+            className={styles.productsLinearImgContainer}
+            fluid={data.products_linear.childImageSharp.fluid}
+          ></Img>
         </div>
-        <CallToAction />
+        <CallToAction className={styles.callToAction} />
       </div>
     </div>
   )
