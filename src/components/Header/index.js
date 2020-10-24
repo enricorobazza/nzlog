@@ -23,8 +23,8 @@ const Header = () => {
   }, [listenToScroll])
 
   useEffect(() => {
-    // setOffseTop(ref.current.offsetTop)
-    // setOffseTop(ref.current.offsetHeight)
+    // setOffseTop(ref.current.offsetTop+40)
+    setOffseTop(ref.current.offsetHeight/3)
   }, [])
 
   return (

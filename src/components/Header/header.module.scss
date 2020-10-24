@@ -6,7 +6,8 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  transition: all ease-in 200ms;
+  transition: all ease-in 500ms, background ease-in 100ms;
+  border-bottom: 3px solid rgba(0, 0, 0, 0);
 }
 
 .header.fixed {
