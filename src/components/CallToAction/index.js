@@ -1,14 +1,27 @@
-import React from "react"
+import React, {useContext} from "react"
 import styles from "./calltoaction.module.scss"
 
-const CallToAction = ({ outlined, className }) => {
+import {ContactOffsetContext} from '../../pages'
+
+const CallToAction = ({ outlined, className, withoutMargin, shortText }) => {
+  const contactOffset = useContext(ContactOffsetContext);
+
   return (
-    <div className={`${styles.callToActionContainer} ${className}`}>
+    <div className={`${!withoutMargin && styles.callToActionContainer} ${className}`}>
       <a
         className={`${styles.callToAction} ${outlined ? styles.outlined : ""}`}
         href="#"
+        onClick={(e) => {
+          e.preventDefault();
+          // window.scrollTo(0, contactOffset);
+          window.scroll({
+            top: contactOffset,
+            behavior: 'smooth' 
+          });
+        }}
       >
-        Entrar em contato
+        {shortText ? `Contato` : `Entrar em contato`}
+        {/* {contactOffset} */}
       </a>
     </div>
   )

@@ -1,6 +1,7 @@
 import React, { useState, useCallback, useRef, useEffect } from "react"
 import styles from "./header.module.scss"
 import globalStyles from "../../styles.module.scss"
+import CallToAction from '../CallToAction'
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const Header = () => {
@@ -38,7 +39,7 @@ const Header = () => {
             <li>Máquinas</li>
             <li>Serviços</li>
             <li>Onde Atuamos</li>
-            <li className={styles.button}>Contato</li>
+            <li><CallToAction withoutMargin outlined shortText/></li>
           </ul>
           {/* <div className={styles.hamburguer}>
           <FontAwesomeIcon

@@ -1,11 +1,13 @@
-import React from "react"
+import React, {useRef, useEffect} from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 import styles from "./contact.module.scss"
 
-const Contact = () => {
+const Contact = ({setOffsetContact}) => {
+  const ref = useRef();
+
   const data = useStaticQuery(graphql`
     query {
       bg: file(relativePath: { eq: "contact.png" }) {
@@ -18,8 +20,12 @@ const Contact = () => {
     }
   `)
 
+  useEffect(() => {
+    setOffsetContact(ref.current.offsetTop)
+  }, [])
+
   return (
-    <div className={styles.container}>
+    <div ref={ref} className={styles.container}>
       <div className={styles.left}>
         <div className={styles.wrapper}>
           <div className={styles.title}>Ainda não se convenceu?</div>

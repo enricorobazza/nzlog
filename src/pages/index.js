@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useState, createContext} from "react"
 
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
@@ -16,23 +16,30 @@ import Footer from "../components/Footer"
 
 import styles from "../styles.module.scss"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <div className={styles.gradient}>
-      <Header />
-      <Banner />
-    </div>
-    <Clients />
-    <Products />
-    <HardPart />
-    <Establishments />
-    <Advantages />
-    <Places />
-    <Social />
-    <Contact />
-    <Footer />
-  </Layout>
-)
+export const ContactOffsetContext = createContext(0);
 
+const IndexPage = () => {
+  const [offsetContact, setOffsetContact] = useState(0)
+
+  return(
+    <ContactOffsetContext.Provider value={offsetContact}>
+      <Layout>
+        <SEO title="Home" />
+        <div className={styles.gradient}>
+          <Header />
+          <Banner />
+        </div>
+        <Clients />
+        <Products />
+        <HardPart />
+        <Establishments />
+        <Advantages />
+        <Places />
+        <Social />
+        <Contact setOffsetContact={setOffsetContact}/>
+        <Footer />
+      </Layout>
+    </ContactOffsetContext.Provider>
+  )
+}
 export default IndexPage
