@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 import styles from "./contact.module.scss"
 
-const Contact = ({setOffsetContact}) => {
+const Contact = ({setContactRef}) => {
   const ref = useRef();
 
   const data = useStaticQuery(graphql`
@@ -21,8 +21,9 @@ const Contact = ({setOffsetContact}) => {
   `)
 
   useEffect(() => {
-    setOffsetContact(ref.current.offsetTop)
-  }, [])
+    setContactRef(ref.current)
+
+  }, [ref.current])
 
   return (
     <div ref={ref} className={styles.container}>

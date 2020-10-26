@@ -34,12 +34,14 @@
   align-items: center;
   margin: 0;
   color: white;
-  font-size: 13pt;
+  font-size: 15px;
 }
 
 .ul li {
   margin: 0;
   display: block;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 .logo {
@@ -54,24 +56,7 @@
 }
 
 .menu {
-  flex: 2;
-}
-
-.button {
-  padding: 11px 40px;
-  border: 1px solid white;
-  border-radius: 5px;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 10pt;
-  cursor: pointer;
-  transition: all 100ms ease-in;
-}
-
-.button:hover {
-  color: $primary;
-  background-color: white;
-  border-color: $primary;
+  flex: 3;
 }
 
 .hamburguer {
@@ -81,6 +66,27 @@
 .icon {
   color: white;
   font-size: 22px;
+}
+// $xxs: 320px;
+// $xs: 480px;
+// $sm: 600px;
+// $md: 768px;
+// $lg: 900px;
+// $xl: 1024px;
+// $xxl: 1200px;
+// $xxxl: 1500px;
+
+@media only screen and (max-width: $xl) {
+  .menu {
+    transform: scale(0.9);
+    flex: 5;
+    margin-right: -10vw;
+  }
+
+  .logo {
+    transform: scale(0.9);
+    margin-left: -5vw;
+  }
 }
 
 @media only screen and (max-width: $md) {

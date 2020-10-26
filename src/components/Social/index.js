@@ -35,7 +35,7 @@ const Social = () => {
     else setSize(2)
   }, [width])
 
-  const [depositions, setDepositions] = useState([
+  const depositions = [
     {
       text: (
         <>
@@ -69,7 +69,7 @@ const Social = () => {
       client: "Fabiana",
       company: "St. Marchê",
     },
-  ])
+  ];
 
   const changeDepositions = direction => {
     const newCurrent = current + direction
@@ -111,7 +111,6 @@ const Social = () => {
             if (dist > 0) changeDepositions(-1)
             else changeDepositions(1)
           }
-          // e.preventDefault()
         }}
       >
         <ArrowButton

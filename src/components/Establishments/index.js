@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useEffect, useRef} from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -6,7 +6,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import styles from "./establishments.module.scss"
 import CallToAction from "../CallToAction"
 
-const Establishments = () => {
+const Establishments = ({setEstablishmentsRef}) => {
+  const ref = useRef();
+
+  useEffect(()=>{
+    setEstablishmentsRef(ref.current)
+  }, [ref.current])
+
   const data = useStaticQuery(graphql`
     query {
       bg: file(relativePath: { eq: "coke_bg.png" }) {
@@ -31,7 +37,7 @@ const Establishments = () => {
   ]
 
   return (
-    <div className={styles.container}>
+    <div ref={ref} className={styles.container}>
       <div className={styles.left}>
         <div className={styles.wrapper}>
           <div className={styles.title}>Onde podem ser instaladas</div>
@@ -40,10 +46,11 @@ const Establishments = () => {
             que se tenha visibilidade e um alto fluxo de pessoas, como em:
           </div>
           <div className={styles.establishmentsContainer}>
-            {establishments.map(establishment => {
+            {establishments.map((establishment, index) => {
               return (
                 <div
                   className={`${styles.establishment} col-4 col-xl-6 col-lg-6 col-md-4 col-xs-4 col-xs-12 col-xxs-12`}
+                  key={index}
                 >
                   <FontAwesomeIcon
                     className={styles.icon}

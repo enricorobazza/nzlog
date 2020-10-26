@@ -1,10 +1,10 @@
 import React, {useContext} from "react"
 import styles from "./calltoaction.module.scss"
 
-import {ContactOffsetContext} from '../../pages'
+import {RefsContext} from '../../pages'
 
 const CallToAction = ({ outlined, className, withoutMargin, shortText }) => {
-  const contactOffset = useContext(ContactOffsetContext);
+  const {contactRef, headerRef} = useContext(RefsContext);
 
   return (
     <div className={`${!withoutMargin && styles.callToActionContainer} ${className}`}>
@@ -13,15 +13,16 @@ const CallToAction = ({ outlined, className, withoutMargin, shortText }) => {
         href="#"
         onClick={(e) => {
           e.preventDefault();
-          // window.scrollTo(0, contactOffset);
+          let toScroll = 0;
+          if(document.documentElement.scrollTop > headerRef.clientHeight) toScroll = contactRef.offsetTop;
+          else toScroll = contactRef.offsetTop - headerRef.clientHeight;
           window.scroll({
-            top: contactOffset,
+            top: toScroll,
             behavior: 'smooth' 
           });
         }}
       >
         {shortText ? `Contato` : `Entrar em contato`}
-        {/* {contactOffset} */}
       </a>
     </div>
   )

@@ -16,30 +16,37 @@ import Footer from "../components/Footer"
 
 import styles from "../styles.module.scss"
 
-export const ContactOffsetContext = createContext(0);
+export const RefsContext = createContext(0);
 
 const IndexPage = () => {
-  const [offsetContact, setOffsetContact] = useState(0)
+  const [contactRef, setContactRef] = useState()
+  const [headerRef, setHeaderRef] = useState()
+  const [servicesRef, setServicesRef] = useState()
+  const [establishmentsRef, setEstablishmentsRef] = useState()
+  const [advantagesRef, setAdvantagesRef] = useState()
+  const [placesRef, setPlacesRef] = useState()
 
   return(
-    <ContactOffsetContext.Provider value={offsetContact}>
+    <RefsContext.Provider value={{
+      contactRef, headerRef, servicesRef, establishmentsRef, advantagesRef, placesRef
+    }}>
       <Layout>
         <SEO title="Home" />
         <div className={styles.gradient}>
-          <Header />
+          <Header setHeaderRef={setHeaderRef}/>
           <Banner />
         </div>
         <Clients />
         <Products />
-        <HardPart />
-        <Establishments />
-        <Advantages />
-        <Places />
+        <HardPart setServicesRef={setServicesRef}/>
+        <Establishments setEstablishmentsRef={setEstablishmentsRef}/>
+        <Advantages setAdvantagesRef={setAdvantagesRef}/>
+        <Places setPlacesRef={setPlacesRef}/>
         <Social />
-        <Contact setOffsetContact={setOffsetContact}/>
+        <Contact setContactRef={setContactRef}/>
         <Footer />
       </Layout>
-    </ContactOffsetContext.Provider>
+    </RefsContext.Provider>
   )
 }
 export default IndexPage

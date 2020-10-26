@@ -1,10 +1,15 @@
-import React from "react"
+import React, {useRef, useEffect} from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
 import styles from "./places.module.scss"
 
-const Places = () => {
+const Places = ({setPlacesRef}) => {
+  const ref = useRef();
+  useEffect(()=>{
+    setPlacesRef(ref.current)
+  }, [ref.current])
+
   const data = useStaticQuery(graphql`
     query {
       rio: file(relativePath: { eq: "rio.png" }) {
@@ -57,15 +62,16 @@ const Places = () => {
   ]
 
   return (
-    <div className={styles.wrapper}>
+    <div ref={ref} className={styles.wrapper}>
       <div className={styles.title}>Onde atuamos</div>
       <div className={styles.description}>
         Estamos presentes em 3 estados, em breve atenderemos mais regiões
       </div>
       <div className={styles.placesContainer}>
-        {places.map(place => {
+        {places.map((place, index) => {
           return (
             <div
+              key={index}
               className={`${styles.place} col-4 col-xl-4 col-lg-6 col-md-12 col-xs-12 col-xs-12 col-xxs-12`}
             >
               <div className={styles.placeTitle}>{place.title}</div>

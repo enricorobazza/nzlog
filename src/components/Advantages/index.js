@@ -1,9 +1,14 @@
-import React from "react"
+import React, {useRef, useEffect} from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import styles from "./advantages.module.scss"
 import CallToAction from "../CallToAction"
 
-const Advantages = () => {
+const Advantages = ({setAdvantagesRef}) => {
+  const ref = useRef();
+  useEffect(()=>{
+    setAdvantagesRef(ref.current)
+  },[])
+
   const advantages = [
     {
       title: "Aumenta a produtividade da sua empresa",
@@ -32,7 +37,7 @@ const Advantages = () => {
   ]
 
   return (
-    <div className={styles.wrapper}>
+    <div ref={ref} className={styles.wrapper}>
       <div className={styles.title}>
         As vantagens de se ter uma vending machine
       </div>
@@ -41,10 +46,11 @@ const Advantages = () => {
         muitos outros pontos positivos para você
       </div>
       <div className={styles.advantagesContainer}>
-        {advantages.map(advantage => {
+        {advantages.map((advantage, index) => {
           return (
             <div
               className={`${styles.advantage} col-4 col-xl-4 col-lg-4 col-md-6 col-xs-6 col-xs-12 col-xxs-12`}
+              key={index}
             >
               <FontAwesomeIcon
                 className={styles.icon}
