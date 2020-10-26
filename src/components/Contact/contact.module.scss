@@ -25,7 +25,7 @@
 
 .title {
   font-weight: 600;
-  font-size: 35px;
+  font-size: $font-lg;
   line-height: 140%;
   text-transform: uppercase;
 }
@@ -41,7 +41,7 @@
 }
 
 .icon {
-  font-size: 18px;
+  font-size: $font-md;
   margin-right: 10px;
 }
 
@@ -76,7 +76,7 @@
 .btnEnviar {
   border-radius: 5px;
   padding: 9px 38px;
-  font-size: 14px;
+  font-size: $font-xs;
   text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;

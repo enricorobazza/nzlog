@@ -25,7 +25,7 @@
 
 .title {
   font-weight: 600;
-  font-size: 35px;
+  font-size: $font-lg;
   line-height: 140%;
   text-transform: uppercase;
 }
@@ -46,11 +46,11 @@
   margin-bottom: 30px;
   font-weight: 600;
   line-height: 140%;
-  font-size: 18px;
+  font-size: $font-sm;
 }
 
 .icon {
-  font-size: 18px;
+  font-size: $font-sm;
   margin-right: 10px;
 }
 
@@ -106,7 +106,7 @@
 
 @media only screen and (max-width: $sm) {
   .establishment {
-    font-size: 14px;
+    font-size: $font-xs;
     text-align: left;
   }
   .establishmentsContainer {
@@ -119,6 +119,6 @@
 
 @media only screen and (max-width: $xs) {
   .establishment {
-    font-size: 12px;
+    font-size: $font-xs;
   }
 }

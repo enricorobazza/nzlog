@@ -10,7 +10,7 @@
 
 .title {
   font-weight: 700;
-  font-size: 35px;
+  font-size: $font-lg;
   line-height: 140%;
   text-transform: uppercase;
   color: $red;
@@ -50,7 +50,7 @@
   margin-bottom: 50px;
   font-weight: 600;
   color: $red;
-  font-size: 18px;
+  font-size: $font-sm * 1.2;
 }
 
 // $xxs: 320px;

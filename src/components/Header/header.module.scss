@@ -34,7 +34,7 @@
   align-items: center;
   margin: 0;
   color: white;
-  font-size: 15px;
+  font-size: $font-md * 0.9;
 }
 
 .ul li {
@@ -51,7 +51,7 @@
 .logo a {
   text-decoration: none;
   color: white;
-  font-size: 25pt;
+  font-size: $font-lg;
   font-weight: bold;
 }
 
@@ -65,7 +65,7 @@
 
 .icon {
   color: white;
-  font-size: 22px;
+  font-size: $font-md;
 }
 // $xxs: 320px;
 // $xs: 480px;

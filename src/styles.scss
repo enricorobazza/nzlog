@@ -19,6 +19,25 @@ $xl: 1024px;
 $xxl: 1200px;
 $xxxl: 1500px;
 
+$font-xxs: 9px;
+$font-xs: 12px;
+$font-sm: 14px;
+$font-md: 18px;
+$font-lg: 28px;
+$font-xl: 33px;
+$font-xxl: 38px;
+
+/*
+
+48    -> 38
+35,38 -> 28
+22    -> 18
+18    -> 14
+13,14,15 -> 11
+12    -> 9
+
+*/
+
 :export {
   secondary: $secondary;
   primary: $primary;

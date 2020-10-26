@@ -33,7 +33,7 @@
 
 .text {
   line-height: 160%;
-  font-size: 16px;
+  font-size: $font-sm;
   letter-spacing: 0.16em;
   color: $darker-gray;
   margin-bottom: 20px;
@@ -49,14 +49,14 @@
   line-height: 160%;
   letter-spacing: 0.12em;
   font-weight: 500;
-  font-size: 18px;
+  font-size: $font-sm;
 }
 
 .company {
   line-height: 160%;
   letter-spacing: 0.12em;
   font-weight: 500;
-  font-size: 14px;
+  font-size: $font-xs;
 }
 
 .divider {
@@ -66,7 +66,7 @@
 }
 
 .quotes {
-  font-size: 38px;
+  font-size: $font-lg;
   color: $red;
   margin-bottom: 20px;
 }

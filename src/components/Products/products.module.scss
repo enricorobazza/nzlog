@@ -33,14 +33,14 @@
 
 .title {
   font-weight: 800;
-  font-size: 39px;
+  font-size: $font-lg;
   line-height: 140%;
   color: $primary;
   text-transform: uppercase;
 }
 
 .description {
-  font-size: 16px;
+  font-size: $font-sm;
   line-height: 140%;
   margin-top: 10px;
   color: #adadad;
