@@ -15,43 +15,54 @@
 }
 
 .wrapper {
-  max-width: $xxl;
+  // max-width: $xxl;
+  max-width: 90%;
   margin: 0 auto;
 }
 
+.wrapperMax {
+  max-width: $xxl;
+}
+
 @media only screen and (max-width: $xxl) {
-  .wrapper {
+  .wrapper,
+  .wrapperMax {
     max-width: $xl;
   }
 }
 
 @media only screen and (max-width: $xl) {
-  .wrapper {
+  .wrapper,
+  .wrapperMax {
     max-width: $lg;
     padding: 0 1%;
   }
 }
 
 @media only screen and (max-width: $lg) {
-  .wrapper {
+  .wrapper,
+  .wrapperMax {
     max-width: $md;
   }
 }
 
 @media only screen and (max-width: $md) {
-  .wrapper {
+  .wrapper,
+  .wrapperMax {
     max-width: $sm;
   }
 }
 
 @media only screen and (max-width: $sm) {
-  .wrapper {
+  .wrapper,
+  .wrapperMax {
     max-width: $xs;
   }
 }
 
 @media only screen and (max-width: $xs) {
-  .wrapper {
+  .wrapper,
+  .wrapperMax {
     padding: 0 10%;
   }
 }

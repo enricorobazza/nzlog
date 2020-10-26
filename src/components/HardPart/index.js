@@ -18,7 +18,7 @@ const HardPart = ({setServicesRef}) => {
   ]
 
   return (
-    <div ref={ref} className={`${globalStyles.wrapper} ${styles.wrapper}`}>
+    <div ref={ref} className={`${globalStyles.wrapper} ${globalStyles.wrapperMax} ${styles.wrapper}`}>
       <div className={styles.title}>Nós fazemos a parte difícil</div>
       <div className={styles.servicesWrapper}>
         {services.map((service, index) => (
