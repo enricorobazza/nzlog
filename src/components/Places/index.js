@@ -72,7 +72,7 @@ const Places = ({setPlacesRef}) => {
           return (
             <div
               key={index}
-              className={`${styles.place} col-4 col-xl-4 col-lg-6 col-md-12 col-xs-12 col-xs-12 col-xxs-12`}
+              className={`${styles.place} col-4 col-xl-4 col-lg-6 col-md-6 col-xs-6 col-xs-6 col-xxs-12`}
             >
               <div className={styles.placeTitle}>{place.title}</div>
               <div style={{ padding: place.padding }}>

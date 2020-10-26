@@ -27,6 +27,10 @@
 //   display: flex;
 // }
 
+.placesContainer {
+  margin-top: 30px;
+}
+
 .place {
   padding: 100px;
   display: inline-block;
@@ -88,7 +92,7 @@
   }
 
   .place {
-    padding: 120px;
+    padding: 60px;
   }
 }
 
@@ -104,11 +108,11 @@
   // }
 
   .place {
-    padding: 80px;
+    padding: 40px;
   }
 
   .wrapper {
-    padding: 80px 15px 80px 15px;
+    padding: 50px 15px 50px 15px;
   }
 }
 
@@ -120,7 +124,7 @@
   //   width: 100%;
   // }
   .place {
-    padding: 50px;
+    padding: 20px;
   }
 }
 

@@ -105,7 +105,20 @@
 }
 
 @media only screen and (max-width: $sm) {
+  .establishment {
+    font-size: 14px;
+    text-align: left;
+  }
+  .establishmentsContainer {
+    padding-left: 30px;
+  }
+  .wrapper {
+    padding: 70px 10px 70px 10px;
+  }
 }
 
 @media only screen and (max-width: $xs) {
+  .establishment {
+    font-size: 12px;
+  }
 }

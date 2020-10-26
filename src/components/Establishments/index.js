@@ -49,7 +49,7 @@ const Establishments = ({setEstablishmentsRef}) => {
             {establishments.map((establishment, index) => {
               return (
                 <div
-                  className={`${styles.establishment} col-4 col-xl-6 col-lg-6 col-md-4 col-xs-4 col-xs-12 col-xxs-12`}
+                  className={`${styles.establishment} col-4 col-xl-6 col-lg-6 col-md-4 col-xs-4 col-xs-6 col-xxs-6`}
                   key={index}
                 >
                   <FontAwesomeIcon
