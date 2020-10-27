@@ -17,98 +17,98 @@ const Products = () => {
       }
       coca: file(relativePath: { eq: "coca.png" }) {
         childImageSharp {
-          fluid(maxWidth: 60, quality: 100) {
+          fluid(maxWidth: 100, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       fanta: file(relativePath: { eq: "fanta.png" }) {
         childImageSharp {
-          fluid(maxWidth: 60, quality: 100) {
+          fluid(maxWidth: 100, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       monster: file(relativePath: { eq: "monster.png" }) {
         childImageSharp {
-          fluid(maxWidth: 60, quality: 100) {
+          fluid(maxWidth: 100, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       matte: file(relativePath: { eq: "matte.png" }) {
         childImageSharp {
-          fluid(maxWidth: 60, quality: 100) {
+          fluid(maxWidth: 100, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       crystal: file(relativePath: { eq: "crystal.png" }) {
         childImageSharp {
-          fluid(maxWidth: 60, quality: 100) {
+          fluid(maxWidth: 100, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       delvalle: file(relativePath: { eq: "delvalle.png" }) {
         childImageSharp {
-          fluid(maxWidth: 60, quality: 100) {
+          fluid(maxWidth: 100, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       schweppes: file(relativePath: { eq: "schweppes.png" }) {
         childImageSharp {
-          fluid(maxWidth: 60, quality: 100) {
+          fluid(maxWidth: 100, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       coca_active: file(relativePath: { eq: "coca_active.png" }) {
         childImageSharp {
-          fluid(maxWidth: 60, quality: 100) {
+          fluid(maxWidth: 100, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       fanta_active: file(relativePath: { eq: "fanta_active.png" }) {
         childImageSharp {
-          fluid(maxWidth: 60, quality: 100) {
+          fluid(maxWidth: 100, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       monster_active: file(relativePath: { eq: "monster_active.png" }) {
         childImageSharp {
-          fluid(maxWidth: 60, quality: 100) {
+          fluid(maxWidth: 100, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       matte_active: file(relativePath: { eq: "matte_active.png" }) {
         childImageSharp {
-          fluid(maxWidth: 60, quality: 100) {
+          fluid(maxWidth: 100, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       crystal_active: file(relativePath: { eq: "crystal_active.png" }) {
         childImageSharp {
-          fluid(maxWidth: 60, quality: 100) {
+          fluid(maxWidth: 100, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       delvalle_active: file(relativePath: { eq: "delvalle_active.png" }) {
         childImageSharp {
-          fluid(maxWidth: 60, quality: 100) {
+          fluid(maxWidth: 100, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       schweppes_active: file(relativePath: { eq: "schweppes_active.png" }) {
         childImageSharp {
-          fluid(maxWidth: 60, quality: 100) {
+          fluid(maxWidth: 100, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }

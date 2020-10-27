@@ -33,12 +33,12 @@ const Banner2 = () => {
         >
           <div className={styles.textWrapper}>
             <div className={styles.title}>
-              Tenha a sua Vending Machine <br /> com custo zero
+              Tenha a sua <span className={styles.noBreak}>Vending Machine já!</span><br /><span className={styles.titleBold}> Custo zero</span>
             </div>
 
             <div className={styles.description}>
               A melhor opção para manter a sua equipe produtiva e o seu ambiente
-              de trabalho satisfatório
+              de trabalho mais agradável
             </div>
           </div>
         </div>

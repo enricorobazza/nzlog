@@ -40,6 +40,15 @@
   text-transform: uppercase;
 }
 
+.titleBold {
+  font-size: 135%;
+  line-height: 140%;
+}
+
+.noBreak {
+  white-space: nowrap;
+}
+
 .description {
   margin-top: 33px;
   color: white;

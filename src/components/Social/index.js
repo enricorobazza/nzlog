@@ -39,7 +39,16 @@ const Social = () => {
     {
       text: (
         <>
-          1 - Passando para deixar registrado a <b>eficiência</b> e{" "}
+          O pessoal da NZLog é muito profissional com o suporte, o atendimento, e realmente <b>trazem conforto para nós</b>.
+        </>
+      ),
+      client: "Allan",
+      company: "Grupo Notre Dame Intermédica ",
+    },
+    {
+      text: (
+        <>
+          Passando para deixar registrado a <b>eficiência</b> e{" "}
           <b>agilidade</b> no atendimento sempre que solicitado, e confiança dos
           consumidores com relação aos produtos da marca.
         </>
@@ -50,24 +59,12 @@ const Social = () => {
     {
       text: (
         <>
-          2 - Passando para deixar registrado a <b>eficiência</b> e{" "}
-          <b>agilidade</b> no atendimento sempre que solicitado, e confiança dos
-          consumidores com relação aos produtos da marca.
+          A máquina com os produtos Coca Cola é um <b>sucesso</b> em nosso condomínio!!!
+          Gostamos e recomendamos!!
         </>
       ),
-      client: "Fabiana",
-      company: "St. Marchê",
-    },
-    {
-      text: (
-        <>
-          3 - Passando para deixar registrado a <b>eficiência</b> e{" "}
-          <b>agilidade</b> no atendimento sempre que solicitado, e confiança dos
-          consumidores com relação aos produtos da marca.
-        </>
-      ),
-      client: "Fabiana",
-      company: "St. Marchê",
+      client: "Valéria",
+      company: "Gerente do Condomínio WISE SP",
     },
   ];
 
