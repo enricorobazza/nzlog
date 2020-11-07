@@ -37,11 +37,20 @@
 }
 
 .icon {
-  font-size: $font-xxl;
+  // font-size: $font-xxl;
+  height: 45px;
   color: $red;
   display: block;
   margin: 0 auto;
   margin-bottom: 20px;
+}
+
+.smaller {
+  transform: scale(0.8);
+}
+
+.midSmaller {
+  transform: scale(0.9);
 }
 
 // $xxs: 320px;

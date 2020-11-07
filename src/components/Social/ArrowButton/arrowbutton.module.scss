@@ -52,11 +52,18 @@
 }
 
 .icon {
-  font-size: $font-lg;
+  width: $font-lg;
+  height: $font-lg;
   color: $darker-gray;
+  margin: 1px 0 0 3px;
 }
 
 .hidden {
   opacity: 0 !important;
   cursor: auto;
+}
+
+.reverse {
+  transform: rotate(180deg);
+  margin: 1px 3px 0 0;
 }

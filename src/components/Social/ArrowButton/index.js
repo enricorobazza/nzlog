@@ -1,6 +1,6 @@
 import React from "react"
 import styles from "./arrowbutton.module.scss"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import Arrow from '../../../icons/arrow.svg'
 
 export const ArrowButton = ({ next, width, current, length, onChange }) => {
   const classes = next
@@ -23,10 +23,7 @@ export const ArrowButton = ({ next, width, current, length, onChange }) => {
       }`}
       onClick={() => onChange(next ? 1 : -1)}
     >
-      <FontAwesomeIcon
-        className={styles.icon}
-        icon={["fas", `arrow-${next ? "right" : "left"}`]}
-      />
+      <Arrow className={`${styles.icon} ${!next && styles.reverse}`}></Arrow>
     </div>
   )
 }
