@@ -8,7 +8,7 @@ import { isSafari } from "react-device-detect"
 const Banner2 = () => {
   const data = useStaticQuery(graphql`
     query {
-      machine: file(relativePath: { eq: "image2.png" }) {
+      machine: file(relativePath: { eq: "image2.webp" }) {
         childImageSharp {
           fluid(quality: 100, maxWidth: 400) {
             ...GatsbyImageSharpFluid

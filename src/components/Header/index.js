@@ -2,7 +2,6 @@ import React, { useState, useCallback, useRef, useEffect, useContext } from "rea
 import styles from "./header.module.scss"
 import globalStyles from "../../styles.module.scss"
 import CallToAction from '../CallToAction'
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {RefsContext} from '../../pages'
 
 const Header = ({setHeaderRef}) => {

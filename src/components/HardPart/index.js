@@ -1,13 +1,32 @@
 import React, {useEffect, useRef} from "react"
 import styles from "./hardpart.module.scss"
 import globalStyles from "../../styles.module.scss"
+import { useStaticQuery, graphql } from "gatsby"
 
 import CallToAction from "../CallToAction"
-import InstallIcon from '../../icons/install.svg'
-import SupplyIcon from '../../icons/supply.svg'
-import MaintenanceIcon from '../../icons/maintenance.svg'
 
 const HardPart = ({setServicesRef}) => {
+  const data = useStaticQuery(graphql`
+    query {
+      install: file(relativePath: { eq: "install.svg" }) {
+        extension
+        publicURL
+      }
+      supply: file(relativePath: { eq: "supply.svg" }) {
+        extension
+        publicURL
+      }
+      coke: file(relativePath: { eq: "coke-bottle.svg" }) {
+        extension
+        publicURL
+      }
+      maintenance: file(relativePath: { eq: "maintenance.svg" }) {
+        extension
+        publicURL
+      }
+    }
+  `)
+
   const ref = useRef()
 
   useEffect(()=>{
@@ -17,17 +36,17 @@ const HardPart = ({setServicesRef}) => {
   const services = [
     { 
       title: "Instalação", 
-      icon: <InstallIcon className={`${styles.icon}`}/>,
+      icon: <img src={data.install.publicURL} className={`${styles.icon}`}/>,
       text: "Para que você não tenha trabalho algum"
     },
     { 
       title: "Abastecimento", 
-      icon: <SupplyIcon className={`${styles.icon} ${styles.verticalIcon}`}/>,
+      icon: <img src={data.coke.publicURL} className={`${styles.icon} ${styles.verticalIcon}`}/>,
       text: "Para você ter tudo o que precisar, quando precisar"
     },
     { 
       title: "Manutenção", 
-      icon: <MaintenanceIcon className={`${styles.icon}`}/>,
+      icon: <img src={data.maintenance.publicURL} className={`${styles.icon}`}/>,
       text: "Para garantir sempre o melhor funcionamento"
     },
   ]

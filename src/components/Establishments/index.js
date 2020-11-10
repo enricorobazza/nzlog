@@ -1,7 +1,6 @@
 import React, {useEffect, useRef} from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 import styles from "./establishments.module.scss"
 import CallToAction from "../CallToAction"
@@ -15,12 +14,16 @@ const Establishments = ({setEstablishmentsRef}) => {
 
   const data = useStaticQuery(graphql`
     query {
-      bg: file(relativePath: { eq: "coke_bg.png" }) {
+      bg: file(relativePath: { eq: "coke_bg.webp" }) {
         childImageSharp {
           fluid(maxWidth: 800, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
+      }
+      map: file(relativePath: { eq: "map.svg" }) {
+        extension
+        publicURL
       }
     }
   `)
@@ -52,9 +55,9 @@ const Establishments = ({setEstablishmentsRef}) => {
                   className={`${styles.establishment} col-4 col-xl-6 col-lg-6 col-md-4 col-xs-4 col-xs-6 col-xxs-6`}
                   key={index}
                 >
-                  <FontAwesomeIcon
+                  <img
                     className={styles.icon}
-                    icon={["fas", "map-marker-alt"]}
+                    src={data.map.publicURL}
                   />
                   {establishment}
                 </div>

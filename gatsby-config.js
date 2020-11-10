@@ -14,14 +14,14 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    {
-      resolve: 'gatsby-plugin-react-svg',
-      options: {
-        rule: {
-          include: /icons\/.*\.svg/
-        }
-      }
-    },
+    // {
+    //   resolve: 'gatsby-plugin-react-svg',
+    //   options: {
+    //     rule: {
+    //       include: /icons\/.*\.svg/
+    //     }
+    //   }
+    // },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -33,7 +33,7 @@ module.exports = {
         background_color: `#f70009`,
         theme_color: `#f70009`,
         display: `minimal-ui`,
-        icon: `src/images/coke.png`, // This path is relative to the root of the site.
+        icon: `src/images/coke.webp`, // This path is relative to the root of the site.
       },
     },
     {

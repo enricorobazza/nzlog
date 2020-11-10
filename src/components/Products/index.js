@@ -8,105 +8,105 @@ import CallToAction from "../CallToAction"
 const Products = () => {
   const data = useStaticQuery(graphql`
     query {
-      products: file(relativePath: { eq: "products2.png" }) {
+      products: file(relativePath: { eq: "products2.webp" }) {
         childImageSharp {
           fluid(maxWidth: 1000, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      coca: file(relativePath: { eq: "coca.png" }) {
+      coca: file(relativePath: { eq: "coca.webp" }) {
         childImageSharp {
           fluid(maxWidth: 100, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      fanta: file(relativePath: { eq: "fanta.png" }) {
+      fanta: file(relativePath: { eq: "fanta.webp" }) {
         childImageSharp {
           fluid(maxWidth: 100, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      monster: file(relativePath: { eq: "monster.png" }) {
+      monster: file(relativePath: { eq: "monster.webp" }) {
         childImageSharp {
           fluid(maxWidth: 100, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      matte: file(relativePath: { eq: "matte.png" }) {
+      matte: file(relativePath: { eq: "matte.webp" }) {
         childImageSharp {
           fluid(maxWidth: 100, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      crystal: file(relativePath: { eq: "crystal.png" }) {
+      crystal: file(relativePath: { eq: "crystal.webp" }) {
         childImageSharp {
           fluid(maxWidth: 100, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      delvalle: file(relativePath: { eq: "delvalle.png" }) {
+      delvalle: file(relativePath: { eq: "delvalle.webp" }) {
         childImageSharp {
           fluid(maxWidth: 100, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      schweppes: file(relativePath: { eq: "schweppes.png" }) {
+      schweppes: file(relativePath: { eq: "schweppes.webp" }) {
         childImageSharp {
           fluid(maxWidth: 100, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      coca_active: file(relativePath: { eq: "coca_active.png" }) {
+      coca_active: file(relativePath: { eq: "coca_active.webp" }) {
         childImageSharp {
           fluid(maxWidth: 100, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      fanta_active: file(relativePath: { eq: "fanta_active.png" }) {
+      fanta_active: file(relativePath: { eq: "fanta_active.webp" }) {
         childImageSharp {
           fluid(maxWidth: 100, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      monster_active: file(relativePath: { eq: "monster_active.png" }) {
+      monster_active: file(relativePath: { eq: "monster_active.webp" }) {
         childImageSharp {
           fluid(maxWidth: 100, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      matte_active: file(relativePath: { eq: "matte_active.png" }) {
+      matte_active: file(relativePath: { eq: "matte_active.webp" }) {
         childImageSharp {
           fluid(maxWidth: 100, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      crystal_active: file(relativePath: { eq: "crystal_active.png" }) {
+      crystal_active: file(relativePath: { eq: "crystal_active.webp" }) {
         childImageSharp {
           fluid(maxWidth: 100, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      delvalle_active: file(relativePath: { eq: "delvalle_active.png" }) {
+      delvalle_active: file(relativePath: { eq: "delvalle_active.webp" }) {
         childImageSharp {
           fluid(maxWidth: 100, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      schweppes_active: file(relativePath: { eq: "schweppes_active.png" }) {
+      schweppes_active: file(relativePath: { eq: "schweppes_active.webp" }) {
         childImageSharp {
           fluid(maxWidth: 100, quality: 100) {
             ...GatsbyImageSharpFluid
@@ -114,7 +114,7 @@ const Products = () => {
         }
       }
 
-      products_linear: file(relativePath: { eq: "products3.png" }) {
+      products_linear: file(relativePath: { eq: "products3.webp" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 100) {
             ...GatsbyImageSharpFluid

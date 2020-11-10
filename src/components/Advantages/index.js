@@ -1,17 +1,44 @@
 import React, {useRef, useEffect} from "react"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import styles from "./advantages.module.scss"
 import CallToAction from "../CallToAction"
-
-import Bolt from '../../icons/bolt.svg'
-import Heart from '../../icons/heart.svg'
-import Clock from '../../icons/clock.svg'
-import Bottles from '../../icons/bottles.svg'
-import Percentage from '../../icons/percentage.svg'
-import Money from '../../icons/money.svg'
-
+import { useStaticQuery, graphql } from "gatsby"
 
 const Advantages = ({setAdvantagesRef}) => {
+  const data = useStaticQuery(graphql`
+    query {
+      bolt: file(relativePath: { eq: "bolt.svg" }) {
+        extension
+        publicURL
+      }
+      heart: file(relativePath: { eq: "heart.svg" }) {
+        extension
+        publicURL
+      }
+      clock: file(relativePath: { eq: "clock.svg" }) {
+        extension
+        publicURL
+      }
+      bottles: file(relativePath: { eq: "bottles.svg" }) {
+        extension
+        publicURL
+      }
+      percentage: file(relativePath: { eq: "percentage.svg" }) {
+        extension
+        publicURL
+      }
+      money: file(relativePath: { eq: "money.svg" }) {
+        extension
+        publicURL
+      }
+
+      coke: file(relativePath: { eq: "coke-bottle.svg" }) {
+        extension
+        publicURL
+      }
+    }
+  `)
+
+
   const ref = useRef();
   useEffect(()=>{
     setAdvantagesRef(ref.current)
@@ -20,33 +47,27 @@ const Advantages = ({setAdvantagesRef}) => {
   const advantages = [
     {
       title: "Aumenta a produtividade da sua empresa",
-      // icon: "bolt",
-      icon: <Bolt className={styles.icon}/>,
+      icon: <img src={data.bolt.publicURL} className={styles.icon}/>,
     },
     {
       title: "Aumenta a satisfação com o ambiente",
-      // icon: "heart",
-      icon: <Heart className={`${styles.icon} ${styles.smaller}`}/>,
+      icon: <img src={data.heart.publicURL} className={`${styles.icon} ${styles.smaller}`}/>,
     },
     {
       title: "Está disponível 24h por dia",
-      // icon: "clock",
-      icon: <Clock className={styles.icon}/>,
+      icon: <img src={data.clock.publicURL} className={styles.icon}/>,
     },
     {
       title: "Possui grande variedade de produtos",
-      // icon: "wine-bottle",
-      icon: <Bottles className={styles.icon}/>,
+      icon: <img src={data.coke.publicURL} className={styles.icon}/>,
     },
     {
       title: "É 100% autônoma",
-      // icon: "percentage",
-      icon: <Percentage className={`${styles.icon} ${styles.midBigger}`}/>,
+      icon: <img src={data.percentage.publicURL} className={`${styles.icon} ${styles.midBigger}`}/>,
     },
     {
       title: "Custo zero de instalação e prestação de serviços",
-      // icon: "dollar-sign",
-      icon: <Money className={`${styles.icon} ${styles.midSmaller}`}/>,
+      icon: <img src={data.money.publicURL} className={`${styles.icon} ${styles.midSmaller}`}/>,
     },
   ]
 
@@ -67,10 +88,6 @@ const Advantages = ({setAdvantagesRef}) => {
               key={index}
             >
               {advantage.icon}
-              {/* <FontAwesomeIcon
-                className={styles.icon}
-                icon={["fas", advantage.icon]}
-              /> */}
               {advantage.title}
             </div>
           )

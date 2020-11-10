@@ -1,8 +1,18 @@
 import React from "react"
 import styles from "./arrowbutton.module.scss"
-import Arrow from '../../../icons/arrow.svg'
+import { useStaticQuery, graphql } from "gatsby"
 
 export const ArrowButton = ({ next, width, current, length, onChange }) => {
+  const data = useStaticQuery(graphql`
+    query {
+      arrow: file(relativePath: { eq: "arrow.svg" }) {
+        extension
+        publicURL
+      }
+    }
+  `)
+
+
   const classes = next
     ? [styles.btnNext, styles.btnNext33, styles.btnNext50, styles.btnNext90]
     : [styles.btnPrev, styles.btnPrev33, styles.btnPrev50, styles.btnPrev90]
@@ -23,7 +33,7 @@ export const ArrowButton = ({ next, width, current, length, onChange }) => {
       }`}
       onClick={() => onChange(next ? 1 : -1)}
     >
-      <Arrow className={`${styles.icon} ${!next && styles.reverse}`}></Arrow>
+      <img src={data.arrow.publicURL} className={`${styles.icon} ${!next && styles.reverse}`} />
     </div>
   )
 }

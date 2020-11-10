@@ -1,8 +1,18 @@
 import React from "react"
 import styles from "./card.module.scss"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { useStaticQuery, graphql } from "gatsby"
 
 const Card = ({ text, clientName, clientCompany, index, current, width }) => {
+  const data = useStaticQuery(graphql`
+  query {
+    quotes: file(relativePath: { eq: "quotes.svg" }) {
+      extension
+      publicURL
+    }
+  }
+`)
+
+
   return (
     <div
       className={`${styles.container} ${
@@ -14,7 +24,7 @@ const Card = ({ text, clientName, clientCompany, index, current, width }) => {
       }`}
       style={{ width: width }}
     >
-      <FontAwesomeIcon className={styles.quotes} icon={["fas", "quote-left"]} />
+      <img className={styles.quotes} src={data.quotes.publicURL} />
       <div className={styles.text}>{text}</div>
       <hr className={styles.divider} />
       <div className={styles.client}>{clientName}</div>

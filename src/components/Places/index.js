@@ -12,21 +12,21 @@ const Places = ({setPlacesRef}) => {
 
   const data = useStaticQuery(graphql`
     query {
-      rio: file(relativePath: { eq: "rio.png" }) {
+      rio: file(relativePath: { eq: "rio.webp" }) {
         childImageSharp {
           fluid(maxWidth: 600, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      parana: file(relativePath: { eq: "parana.png" }) {
+      parana: file(relativePath: { eq: "parana.webp" }) {
         childImageSharp {
           fluid(maxWidth: 600, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      sp: file(relativePath: { eq: "sp.png" }) {
+      sp: file(relativePath: { eq: "sp.webp" }) {
         childImageSharp {
           fluid(maxWidth: 600, quality: 100) {
             ...GatsbyImageSharpFluid
