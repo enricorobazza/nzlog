@@ -14,11 +14,18 @@ const Social = () => {
   const [size, setSize] = useState(0)
   const [touch, setTouch] = useState()
 
+  // const sizes = [
+  //   { width: "33%", breakpoints: [1 / 3, 0, -1 / 3] },
+  //   { width: "50%", breakpoints: [5 / 13, -2 / 18, -3 / 5] },
+  //   { width: "90%", breakpoints: [2 / 10, -14 / 20, -32 / 20] },
+  // ]
+
   const sizes = [
-    { width: "33%", breakpoints: [1 / 3, 0, -1 / 3] },
-    { width: "50%", breakpoints: [5 / 13, -2 / 18, -3 / 5] },
-    { width: "90%", breakpoints: [2 / 10, -14 / 20, -32 / 20] },
+    { width: "33%", breakpoints: [1 / 2, 1/6, -1/6, -1/2, -5/6, -7/6, -3/2] },
+    { width: "50%", breakpoints: [39/100, -10/100, -3 / 5, -109.7/100, -159/100, -209.4/100] },
+    { width: "90%", breakpoints: [2 / 10, -14 / 20, -32 / 20, -50/20, -68/20, -429/100, -520/100] },
   ]
+
 
   useEffect(() => {
     /* $xxs: 320px;
@@ -66,6 +73,43 @@ const Social = () => {
       client: "Valéria",
       company: "Gerente do Condomínio WISE SP",
     },
+    {
+      text: (<>Meu nome é Ana Lucia, sou sub síndica do Cond. Morada Imperial na zona norte de São Paulo,
+        Assim que assumimos, fiz contato através do Vending Machine Coca Cola, sempre muito bem
+        atendida, já foi marcado uma visita e em poucos dias já tínhamos a nossa primeira Vending
+        Machine no Condominio, somente com latinhas.
+        Devido ao <b>conforto</b> que nos proporcionou, as vendas cresceram, e logo nos foi oferecido mais
+        uma Vending Machine com garrafas de 1,5 e um mix de latinhas, completando a linha.
+        Quando a quarentena chegou a Vending Machine <b>foi a salvação</b> para muitos moradores,
+        principalmente nos primeiros dias, onde a quarentena foi mais rigorosa.
+        Essa parceria nos dá conforto, segurança e valoriza nosso Condominio!</>),
+      client: "Ana Lucia",
+      company: "Cond. Morada Imperial"
+    },
+    {
+      text: (<>A máquina da Coca Cola em nosso condomínio fez toda a <b>diferença</b>. Só temos elogios por
+        parte dos moradores. Seu abastecimento é feito com <b>frequência</b>.
+        Recomendamos.</>),
+      client: "Alexandre",
+      company: "Condomínio Tamboré 6"
+    },
+    {
+      text: (<>Parceiro <b>comprometido</b> com o abastecimento dos equipamentos aqui na Robert Bosch.</>),
+      client: "Dauglê Maria Carneiro",
+      company: "Filial Robert Bosch"
+    },
+    {
+      text: (<>A NZ LOG é responsável por entregar <b>felicidade</b>!
+        Com muita <b>dedicação</b> e senso de prioridade a NZ LOG tem como seu principal objetivo entregar
+        felicidade as famílias de todo Brasil.
+        É responsável por realizar a operação Logística da Coca Cola, para mim os produtos da marca
+        são sinônimos de momentos felizes.
+        NZ contribui diretamente para que estes momentos felizes sejam proporcionados a minha e
+        muitas outras famílias, através de muito foco, trabalho duro, dedicação e o principal sempre
+        entregando na hora e local certo!</>),
+      client: "Fabio Araujo Ferreira",
+      company: "Operação galpão 400 Cajamar"
+    }
   ];
 
   const changeDepositions = direction => {

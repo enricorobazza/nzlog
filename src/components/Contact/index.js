@@ -2,6 +2,7 @@ import React, {useRef, useEffect, useState} from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import axios from 'axios'
+import LoadingGif from '../../images/loading.gif'
 
 import styles from "./contact.module.scss"
 
@@ -11,6 +12,7 @@ const Contact = ({setContactRef}) => {
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(true);
 
   const data = useStaticQuery(graphql`
     query {
@@ -85,6 +87,7 @@ const Contact = ({setContactRef}) => {
               <button className={styles.btnEnviar} type="submit">
                 Enviar
               </button>
+              {loading && <img width="50" src={LoadingGif} alt="Carregando"/>}
             </form>
           </div>
         </div>
