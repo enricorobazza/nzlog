@@ -43,7 +43,7 @@ const Establishments = ({setEstablishmentsRef}) => {
     <div ref={ref} className={styles.container}>
       <div className={styles.left}>
         <div className={styles.wrapper}>
-          <div className={styles.title}>Onde podem ser instaladas</div>
+          <h2 className={styles.title}>Onde podem ser instaladas</h2>
           <div className={styles.description}>
             As Vending Machines podem ser instaladas em qualquer lugar, desde
             que se tenha visibilidade e um alto fluxo de pessoas, como em:

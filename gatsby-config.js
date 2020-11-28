@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `NZLog`,
-    description: `NZLog description`,
+    description: `Com a NZLog, você pode ter sua vending machine com os principais produtos da marca Coca-Cola de forma totalmente gratuita. E nós ainda cuidamos de toda parte da instalação, abastecimento e manutenção.`,
     author: `@enricorobazza`,
   },
   plugins: [

@@ -74,6 +74,9 @@ const Social = () => {
       company: "Gerente do Condomínio WISE SP",
     },
     {
+      shortText: (<>Meu nome é Ana Lucia, sou sub síndica do Cond. Morada Imperial na zona norte de São Paulo,
+        Assim que assumimos, fiz contato através do Vending Machine Coca Cola, sempre muito bem
+        atendida...</>),
       text: (<>Meu nome é Ana Lucia, sou sub síndica do Cond. Morada Imperial na zona norte de São Paulo,
         Assim que assumimos, fiz contato através do Vending Machine Coca Cola, sempre muito bem
         atendida, já foi marcado uma visita e em poucos dias já tínhamos a nossa primeira Vending
@@ -99,6 +102,9 @@ const Social = () => {
       company: "Filial Robert Bosch"
     },
     {
+      shortText: (<>A NZ LOG é responsável por entregar <b>felicidade</b>!
+        Com muita <b>dedicação</b> e senso de prioridade a NZ LOG tem como seu principal objetivo entregar
+        felicidade as famílias de todo Brasil...</>),
       text: (<>A NZ LOG é responsável por entregar <b>felicidade</b>!
         Com muita <b>dedicação</b> e senso de prioridade a NZ LOG tem como seu principal objetivo entregar
         felicidade as famílias de todo Brasil.
@@ -120,10 +126,10 @@ const Social = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.title}>
+      <h2 className={styles.title}>
         O que nossos parceiros
         <br /> pensam sobre nós
-      </div>
+      </h2>
       <div className={styles.description}>
         Procuramos sempre proporcionar a melhor experiência
       </div>
@@ -179,6 +185,7 @@ const Social = () => {
             return (
               <Card
                 key={index}
+                shortText={deposition.shortText}
                 text={deposition.text}
                 clientName={deposition.client}
                 clientCompany={deposition.company}

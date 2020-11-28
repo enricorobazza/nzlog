@@ -1,8 +1,8 @@
-import React from "react"
+import React, {useState, useEffect} from "react"
 import styles from "./card.module.scss"
 import { useStaticQuery, graphql } from "gatsby"
 
-const Card = ({ text, clientName, clientCompany, index, current, width }) => {
+const Card = ({ shortText, text, clientName, clientCompany, index, current, width }) => {
   const data = useStaticQuery(graphql`
   query {
     quotes: file(relativePath: { eq: "quotes.svg" }) {
@@ -12,6 +12,12 @@ const Card = ({ text, clientName, clientCompany, index, current, width }) => {
   }
 `)
 
+  const [collapsed, setCollapsed] = useState(false);
+
+  const toggleMore = (e) => {
+    e.preventDefault();
+    setCollapsed(!collapsed);
+  }
 
   return (
     <div
@@ -25,7 +31,18 @@ const Card = ({ text, clientName, clientCompany, index, current, width }) => {
       style={{ width: width }}
     >
       <img className={styles.quotes} src={data.quotes.publicURL} />
-      <div className={styles.text}>{text}</div>
+      {
+        !collapsed && shortText != undefined ? 
+        <div className={styles.text}>
+          {shortText} {' '}
+          <a className={styles.seeMore} onClick={toggleMore} href="#">Ver mais</a>
+        </div> 
+        : 
+        <div className={styles.text}>
+          {text} {' '}
+          {collapsed && <a className={styles.seeMore} onClick={toggleMore} href="#">Ver menos</a>} 
+        </div> 
+      }
       <hr className={styles.divider} />
       <div className={styles.client}>{clientName}</div>
       <div className={styles.company}>{clientCompany}</div>

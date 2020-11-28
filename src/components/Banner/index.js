@@ -32,9 +32,9 @@ const Banner2 = () => {
           className={`${styles.textContainer} col-7 col-xl-6 col-lg-6 col-md-6 col-xs-12 col-xs-12 col-xxs-12`}
         >
           <div className={styles.textWrapper}>
-            <div className={styles.title}>
+            <h1 className={styles.title}>
               Tenha a sua <span className={styles.noBreak}>Vending Machine já!</span><br /><span className={styles.titleBold}> Custo zero</span>
-            </div>
+            </h1>
 
             <div className={styles.description}>
               A melhor opção para manter a sua equipe produtiva e o seu ambiente

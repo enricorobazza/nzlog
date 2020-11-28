@@ -53,7 +53,7 @@ const HardPart = ({setServicesRef}) => {
 
   return (
     <div ref={ref} className={`${globalStyles.wrapper} ${globalStyles.wrapperMax} ${styles.wrapper}`}>
-      <div className={styles.title}>Nós fazemos a parte difícil</div>
+      <h2 className={styles.title}>Nós fazemos a parte difícil</h2>
       <div className={styles.description}>Com a NZLog você não precisa se preocupar com nada</div>
       <div className={styles.servicesWrapper}>
         {services.map((service, index) => (

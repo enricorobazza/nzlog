@@ -142,12 +142,12 @@ const Products = () => {
 
       <div className={styles.contentContainer}>
         <div className={styles.wrapper}>
-          <span className={styles.title}>
+          <h2 className={styles.title}>
             Os produtos
             <span className={styles.noBreak}> Coca-Cola </span>
             <br />
             na palma da sua mão
-          </span>
+          </h2>
           <br />
           <div className={styles.description}>
             Disponha da grande variedade de produtos Coca-Cola para deixar o seu

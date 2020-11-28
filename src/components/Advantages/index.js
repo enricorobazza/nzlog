@@ -73,9 +73,9 @@ const Advantages = ({setAdvantagesRef}) => {
 
   return (
     <div ref={ref} className={styles.wrapper}>
-      <div className={styles.title}>
+      <h2 className={styles.title}>
         As vantagens de se ter uma vending machine
-      </div>
+      </h2>
       <div className={styles.description}>
         Além de ter bebidas sempre geladas, as vending machines trazem <br />{" "}
         muitos outros pontos positivos para você

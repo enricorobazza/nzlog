@@ -35,7 +35,7 @@ const Contact = ({setContactRef}) => {
     <div ref={ref} className={styles.container}>
       <div className={styles.left}>
         <div className={styles.wrapper}>
-          <div className={styles.title}>Ainda não se convenceu?</div>
+          <h2 className={styles.title}>Ainda não se convenceu?</h2>
           <div className={styles.description}>
             Entre em contato conosco e tire suas dúvidas!
           </div>

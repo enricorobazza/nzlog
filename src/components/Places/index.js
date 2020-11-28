@@ -63,7 +63,7 @@ const Places = ({setPlacesRef}) => {
 
   return (
     <div ref={ref} className={styles.wrapper}>
-      <div className={styles.title}>Onde atuamos</div>
+      <h2 className={styles.title}>Onde atuamos</h2>
       <div className={styles.description}>
         Estamos presentes em 3 estados, em breve atenderemos mais regiões
       </div>
