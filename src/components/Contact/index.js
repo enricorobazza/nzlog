@@ -12,7 +12,9 @@ const Contact = ({setContactRef}) => {
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
+  const [showError, setShowError] = useState(false)
 
   const data = useStaticQuery(graphql`
     query {
@@ -23,6 +25,15 @@ const Contact = ({setContactRef}) => {
           }
         }
       }
+      check: file(relativePath: { eq: "check.svg" }) {
+        extension
+        publicURL
+      }
+      times: file(relativePath: { eq: "times.svg" }) {
+        extension
+        publicURL
+      }
+
     }
   `)
 
@@ -42,15 +53,24 @@ const Contact = ({setContactRef}) => {
           <div className={styles.formContainer}>
             <form action="#" onSubmit={async (e) => {
               e.preventDefault();
+              setShowError(false);
+              setShowSuccess(false);
+              setLoading(true);
               try{
                 const answer = await axios.post('mail.php', {name, email, message, phone});
-                console.log(answer);
-                alert('Chegou !!');
+                setMessage("");
+                setShowSuccess(true);
+                setTimeout(() => {
+                  setShowSuccess(false);
+                }, 5000)
               }
               catch(err){
-                alert('erro!!');
-                console.log(err);
+                setShowError(true);
+                setTimeout(() => {
+                  setShowError(false);
+                }, 5000)
               }
+              setLoading(false);
             }}>
               <div className={styles.formRow}>
                 <label for="name">Nome</label>
@@ -87,7 +107,15 @@ const Contact = ({setContactRef}) => {
               <button className={styles.btnEnviar} type="submit">
                 Enviar
               </button>
-              {loading && <img width="50" src={LoadingGif} alt="Carregando"/>}
+              {loading && <img className={styles.loadingGif} width="50" src={LoadingGif} alt="Carregando"/>}
+              {showSuccess && <div className={styles.formMessage}> 
+                <img src={data.check.publicURL} className={`${styles.icon}`} /> 
+                Mensagem enviada com sucesso.
+              </div>}
+              {showError && <div className={styles.formMessage}>
+                <img src={data.times.publicURL} className={`${styles.icon}`} />
+                Erro ao enviar mensagem.
+              </div>}
             </form>
           </div>
         </div>
